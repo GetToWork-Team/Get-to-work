@@ -54,6 +54,10 @@ MonoBehaviour:
   title: 
   informationList: []
   newsPaperScriptableObject: {fileID: 11400000, guid: 236817a22487f0642a1747be113e9c0e, type: 2}
+  titleText: {fileID: 2189564488628331375}
+  textMeshPro:
+  - {fileID: 3430536775842257833}
+  - {fileID: 2122090092754390265}
 --- !u!1 &1527343870288805583
 GameObject:
   m_ObjectHideFlags: 0
