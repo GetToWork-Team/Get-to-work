@@ -18,8 +18,8 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timerDurationInSecond++;//Used to add a second to the timer for a proper render
         UpdateUI();
+        timerDurationInSecond+=0.5f;//Used to add a second to the timer for a proper render
     }
 
     void FixedUpdate()
