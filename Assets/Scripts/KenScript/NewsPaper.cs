@@ -1,46 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 
 public class NewsPaper : MonoBehaviour
 {
-    public bool isFakeNews;
-    public string title;
-    public List<string> informationList = new List<string>();
-
+    [Header("Donnee Necessaire")]
+    [SerializeField] private SpriteRenderer _SpriteRenderer;
     public NewsPaperScriptableObject newsPaperScriptableObject;
 
-    public TextMeshPro titleText;
-    public List<TextMeshPro> textMeshPro = new List<TextMeshPro>();
+    [Header("Information du Journal")]
+    public bool isFakeNews;
+    public Sprite newspaperTexture2D;
 
 
     private void Start()
     {
         SetUpScriptableObjectNewsPaper(newsPaperScriptableObject);
-        UpdateNewspaperInformation();
+        UpdateSprite();
     }
 
     public void SetUpScriptableObjectNewsPaper(NewsPaperScriptableObject pNewsPaperScriptableObject)
     {
         isFakeNews = pNewsPaperScriptableObject.isFakeNews;
-        title = pNewsPaperScriptableObject.title;
-        informationList = pNewsPaperScriptableObject.Information;
+        newspaperTexture2D = pNewsPaperScriptableObject.newsPaperTexture;
     }
 
-    public void UpdateNewspaperInformation()
+    public void UpdateSprite()
     {
-        titleText.text = title;
-
-        for (int i = 0; i < informationList.Count; i++)
-        {
-            Debug.Log(informationList[i]);
-            if(i >= textMeshPro.Count)
-            {
-                break;
-            }
-            textMeshPro[i].text = informationList[i];
-        }
+        if (_SpriteRenderer) { _SpriteRenderer.sprite = newspaperTexture2D; }
+        
     }
 }
