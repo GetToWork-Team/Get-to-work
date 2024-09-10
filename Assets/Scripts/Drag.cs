@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class Drag : MonoBehaviour
 {
-    public MoneySystem moneySystem;
-    public NewsPaperScriptableObject newsPaper;
+    public NewsPaper newsPaper;
+    public float resetSpeed = 0.1f;
+
+    private GameObject moneySystemOBJ;
+    private MoneySystem moneySystem;
+
     private bool isInDrag = false;
     private bool shouldReCenter = true;
     private Vector3 offset;
     
-    public GameObject trashZone;
-    public GameObject yesZone;
-    public float resetSpeed = 0.1f;
+    private GameObject trashZone;
+    private GameObject yesZone;
+
+    void Start()
+    {
+        moneySystemOBJ = GameObject.Find("MoneySystem");
+        moneySystem = GetComponent<MoneySystem>();
+        trashZone = GameObject.Find("Canvas/Trash");
+        yesZone = GameObject.Find("Canvas/Valid");
+        //newsPaper = ;
+    }
 
     void Update()
     {
