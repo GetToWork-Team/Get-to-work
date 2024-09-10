@@ -223,6 +223,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5366806664061282440, guid: 79789363b3a185e4ab9dce45415cfb80, type: 3}
+      propertyPath: textMeshPro.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5366806664061282440, guid: 79789363b3a185e4ab9dce45415cfb80, type: 3}
+      propertyPath: textMeshPro.Array.data[2]
+      value: 
+      objectReference: {fileID: 8188344369215898202}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7881364090643758934, guid: 79789363b3a185e4ab9dce45415cfb80, type: 3}

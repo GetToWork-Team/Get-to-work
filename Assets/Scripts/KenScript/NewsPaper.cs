@@ -35,7 +35,8 @@ public class NewsPaper : MonoBehaviour
 
         for (int i = 0; i < informationList.Count; i++)
         {
-            if(i > textMeshPro.Count)
+            Debug.Log(informationList[i]);
+            if(i >= textMeshPro.Count)
             {
                 break;
             }
