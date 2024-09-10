@@ -15,7 +15,6 @@ public class NewsPaper : MonoBehaviour
     public TextMeshPro titleText;
     public List<TextMeshPro> textMeshPro = new List<TextMeshPro>();
 
-    private int _InformationNumber;
 
     private void Start()
     {
@@ -28,7 +27,6 @@ public class NewsPaper : MonoBehaviour
         isFakeNews = pNewsPaperScriptableObject.isFakeNews;
         title = pNewsPaperScriptableObject.title;
         informationList = pNewsPaperScriptableObject.Information;
-        _InformationNumber = pNewsPaperScriptableObject.numberOfInformation;
     }
 
     public void UpdateNewspaperInformation()
