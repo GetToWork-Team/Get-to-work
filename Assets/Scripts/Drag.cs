@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Drag : MonoBehaviour
 {
+    public MoneySystem moneySystem;
+    public NewsPaperScriptableObject newsPaper;
     private bool isInDrag = false;
     private bool shouldReCenter = true;
     private Vector3 offset;
@@ -29,7 +31,22 @@ public class Drag : MonoBehaviour
         else if (transform.position.x > yesZone.transform.position.x)
         {
             shouldReCenter = false;
+
+            if (!isInDrag)
+            {
+                if (newsPaper.isFakeNews)
+                {
+                    moneySystem.currentMoney += moneySystem.intoxMoneyReward;
+                    Debug.Log("intox");
+                }
+                else
+                {
+                    moneySystem.currentMoney += moneySystem.newsMoneyReward;
+                    Debug.Log("news");
+                }
+            }
             Debug.Log("To yes");
+            Debug.Log(moneySystem.currentMoney);
         }
         else
         {

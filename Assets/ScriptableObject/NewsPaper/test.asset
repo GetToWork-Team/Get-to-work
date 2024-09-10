@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: test
   m_EditorClassIdentifier: 
   newsPaperType: 0
-  isFakeNews: 1
+  isFakeNews: 0
   numberOfInformation: 2
-  title: Pourquoi pas
+  title: 'test
+
+'
   Information:
   - je me promene dans la rue de midi
   - je suis nuuuuuuuuuuue
