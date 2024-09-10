@@ -27,6 +27,12 @@ public class LevelManager : MonoBehaviour
             };
             originalDayNewsPapers.Add(lDayCopy);
         }
+
+        
+    }
+    private void Start()
+    {
+        WinScreenPanel.onNextDayButton.AddListener(ChangeToNextDay);
     }
     public void ChangeToNextDay()
     {
@@ -48,6 +54,16 @@ public class LevelManager : MonoBehaviour
         }
         
         dayNewsPapers[dayIndex].newsPapers = new List<NewsPaper>(originalDayNewsPapers[dayIndex].newsPapers);
+    }
+
+    public void Clearlevel()
+    {
+
+    }
+
+    public void OnDisable()
+    {
+        WinScreenPanel.onNextDayButton.RemoveListener(ChangeToNextDay);
     }
 
 }

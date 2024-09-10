@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform NewsPaperContainer;
     [SerializeField] private Transform NewsPaperSpawnPosition;
     private NewsPaper currentNewsPaper;
+
+    [SerializeField] private GameObject _WinScreenPanel;
+
 
     private void Start()
     {
@@ -17,6 +21,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         TrashTest();
+        EndOfDayTask();
     }
 
     public void GenerateNewsPaper()
@@ -40,6 +45,14 @@ public class GameManager : MonoBehaviour
         levelManager.dayNewsPapers[levelManager.currentDayIndex].newsPapers.Remove(lSelectedNewsPaper);
     }
 
+    private void EndOfDayTask()
+    {
+        if(levelManager.dayNewsPapers[levelManager.currentDayIndex].newsPapers.Count <= 0)
+        {
+            _WinScreenPanel.SetActive(true);
+        }
+    }
+
     public void TrashTest()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -48,4 +61,6 @@ public class GameManager : MonoBehaviour
             GenerateNewsPaper();
         }
     }
+
+    
 }

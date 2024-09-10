@@ -32,31 +32,9 @@ public class NewsPaperEditor : EditorWindow
         else
         {
             // Afficher les champs pour configurer le ScriptableObject
-            newsPaper.newsPaperType = (NewsPaperEnum)EditorGUILayout.EnumPopup("Type de Journal", newsPaper.newsPaperType);
             newsPaper.isFakeNews = EditorGUILayout.Toggle("Intox ?", newsPaper.isFakeNews);
-            newsPaper.title = EditorGUILayout.TextField("Titre", newsPaper.title);
-            newsPaper.numberOfInformation = EditorGUILayout.IntField("Nombre d'informations", newsPaper.numberOfInformation);
+            newsPaper.newsPaperTexture = (Sprite)EditorGUILayout.ObjectField("Photo", newsPaper.newsPaperTexture, typeof(Sprite), false);
 
-            // Affiche les champs spécifiques en fonction du type de NewsPaper
-            switch (newsPaper.newsPaperType)
-            {
-                case NewsPaperEnum.Photo:
-                    newsPaper.picture2D = (Texture2D)EditorGUILayout.ObjectField("Photo", newsPaper.picture2D, typeof(Texture2D), false);
-                    break;
-                
-            }
-            GUILayout.Label("Informations du Journal:");
-            for (int i = 0; i < newsPaper.Information.Count; i++)
-            {
-                newsPaper.Information[i] = EditorGUILayout.TextField($"Information {i + 1}", newsPaper.Information[i]);
-            }
-
-            // Bouton pour ajuster la liste d'informations
-            if (GUILayout.Button("Ajuster la liste d'informations"))
-            {
-                newsPaper.AdjustInformationList();
-                EditorUtility.SetDirty(newsPaper);
-            }
 
             // Bouton pour sauvegarder les modifications
             if (GUILayout.Button("Sauvegarder le Journal"))
