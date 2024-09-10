@@ -45,6 +45,11 @@ public class NewsPaperEditor : EditorWindow
                     break;
                 
             }
+            GUILayout.Label("Informations du Journal:");
+            for (int i = 0; i < newsPaper.Information.Count; i++)
+            {
+                newsPaper.Information[i] = EditorGUILayout.TextField($"Information {i + 1}", newsPaper.Information[i]);
+            }
 
             // Bouton pour ajuster la liste d'informations
             if (GUILayout.Button("Ajuster la liste d'informations"))

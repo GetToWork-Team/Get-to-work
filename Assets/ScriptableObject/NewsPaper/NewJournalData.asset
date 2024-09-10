@@ -15,9 +15,9 @@ MonoBehaviour:
   newsPaperType: 0
   isFakeNews: 1
   numberOfInformation: 3
-  title: 
+  title: Bonjour
   Information:
-  - 
-  - 
-  - 
+  - wow
+  - youhou
+  - test
   picture2D: {fileID: 0}
