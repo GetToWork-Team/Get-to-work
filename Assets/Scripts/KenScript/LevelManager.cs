@@ -55,11 +55,7 @@ public class LevelManager : MonoBehaviour
         
         dayNewsPapers[dayIndex].newsPapers = new List<NewsPaper>(originalDayNewsPapers[dayIndex].newsPapers);
     }
-
-    public void Clearlevel()
-    {
-
-    }
+  
 
     public void OnDisable()
     {
