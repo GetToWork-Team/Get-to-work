@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NewJournalData
   m_EditorClassIdentifier: 
   newsPaperType: 0
-  isFakeNews: 1
+  isFakeNews: 0
   numberOfInformation: 3
   title: Bonjour
   Information:
