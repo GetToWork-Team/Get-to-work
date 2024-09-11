@@ -22,7 +22,7 @@ public class TitleScreen : MonoBehaviour
     private void OnPlay()
     {
         Debug.Log("LoadScene :  GameScene");
-        SceneManager.LoadSceneAsync("GameScene");
+        SceneManager.LoadScene("GameScene");
     }
 
     private void OnCredit()

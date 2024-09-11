@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,6 +13,7 @@ public class GameOverScreen : MonoBehaviour
 
     private void OnReturnButton()
     {
-        SceneManager.LoadSceneAsync("TitleScreen");
+        gameObject.SetActive(false);
+        SceneManager.LoadSceneAsync("GameScene");
     }
 }
