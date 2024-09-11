@@ -918,11 +918,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dayNewsPapers:
   - newsPapers:
+    - {fileID: 5366806664061282440, guid: 15691bc492f201d44afb6e8433910727, type: 3}
     - {fileID: 5366806664061282440, guid: 79789363b3a185e4ab9dce45415cfb80, type: 3}
-    - {fileID: 5366806664061282440, guid: ecaabc7b1fcefb640bdbc7f470f62ef8, type: 3}
-    - {fileID: 5366806664061282440, guid: 79789363b3a185e4ab9dce45415cfb80, type: 3}
-    - {fileID: 5366806664061282440, guid: ecaabc7b1fcefb640bdbc7f470f62ef8, type: 3}
-    - {fileID: 5366806664061282440, guid: 79789363b3a185e4ab9dce45415cfb80, type: 3}
+    - {fileID: 5366806664061282440, guid: a4eb19b5bf7a427438189e795bebee24, type: 3}
+    - {fileID: 5366806664061282440, guid: 9200398cddb89cd468032fe740d17f9c, type: 3}
+    - {fileID: 5366806664061282440, guid: c0fb8793dc8d6444fa20992bb2c319bd, type: 3}
   - newsPapers:
     - {fileID: 5366806664061282440, guid: ecaabc7b1fcefb640bdbc7f470f62ef8, type: 3}
     - {fileID: 5366806664061282440, guid: 79789363b3a185e4ab9dce45415cfb80, type: 3}
