@@ -60,14 +60,19 @@ public class Drag : MonoBehaviour
                 if (newsPaper.isFakeNews)
                 {
                     moneySystem.currentMoney += moneySystem.intoxMoneyReward;
+                    intoxBar.fillAmount += 0.1f;
+                    if(intoxBar.fillAmount > 1f)
+                    {
+                        // TO DO : GAME OVER
+                    }
 
                     Debug.Log("intox");
-                    intoxBar.fillAmount += 2;
                     gameManager.DestoyNewsPaper();
                 }
                 else
                 {
                     moneySystem.currentMoney += moneySystem.newsMoneyReward;
+                    intoxBar.fillAmount -= 0.05f;
                     Debug.Log("news");
                     gameManager.DestoyNewsPaper();
                 }
