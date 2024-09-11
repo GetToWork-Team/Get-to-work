@@ -5,13 +5,24 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     private LevelManager levelManager => LevelManager.instance;
     [SerializeField] private Transform NewsPaperContainer;
     [SerializeField] private Transform NewsPaperSpawnPosition;
-    private NewsPaper currentNewsPaper;
+    private NewsPaper _CurrentNewsPaper;
+    private NewsPaper _SelectedNewsPaper;
 
     [SerializeField] private GameObject _WinScreenPanel;
 
+    private void Awake()
+    {
+        if(instance != null)
+        {
+            Debug.LogError("Deux instance de GameManager ne peuvent esister");
+            Destroy(instance);
+        }
+        instance = this;
+    }
 
     private void Start()
     {
@@ -20,8 +31,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        TrashTest();
         EndOfDayTask();
+        TrashTest();
     }
 
     public void GenerateNewsPaper()
@@ -40,9 +51,9 @@ public class GameManager : MonoBehaviour
         }
 
         int lRandom = Random.Range(0, levelManager.dayNewsPapers[levelManager.currentDayIndex].newsPapers.Count);
-        NewsPaper lSelectedNewsPaper = levelManager.dayNewsPapers[levelManager.currentDayIndex].newsPapers[lRandom];
-        currentNewsPaper = Instantiate(lSelectedNewsPaper, NewsPaperSpawnPosition.position, Quaternion.identity,NewsPaperContainer);
-        levelManager.dayNewsPapers[levelManager.currentDayIndex].newsPapers.Remove(lSelectedNewsPaper);
+        _SelectedNewsPaper = levelManager.dayNewsPapers[levelManager.currentDayIndex].newsPapers[lRandom];
+        _CurrentNewsPaper = Instantiate(_SelectedNewsPaper, NewsPaperSpawnPosition.position, Quaternion.identity,NewsPaperContainer);
+        //levelManager.dayNewsPapers[levelManager.currentDayIndex].newsPapers.Remove(_SelectedNewsPaper);
     }
 
     private void EndOfDayTask()
@@ -53,11 +64,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void TrashTest()
+    public void DestoyNewsPaper()
+    {
+        levelManager.dayNewsPapers[levelManager.currentDayIndex].newsPapers.Remove(_SelectedNewsPaper);
+        _SelectedNewsPaper = null;
+        Destroy(_CurrentNewsPaper.gameObject);
+        GenerateNewsPaper();
+        
+    }
+
+    private void TrashTest()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            Destroy(currentNewsPaper.gameObject);
+            levelManager.dayNewsPapers[levelManager.currentDayIndex].newsPapers.Remove(_SelectedNewsPaper);
+            _SelectedNewsPaper = null;
+            Destroy(_CurrentNewsPaper.gameObject);
             GenerateNewsPaper();
         }
     }
