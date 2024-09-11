@@ -20,14 +20,15 @@ public class Drag : MonoBehaviour
     void Start()
     {
         moneySystemOBJ = GameObject.Find("MoneySystem");
-        moneySystem = GetComponent<MoneySystem>();
+        moneySystem = moneySystemOBJ.GetComponent<MoneySystem>();
         trashZone = GameObject.Find("Canvas/Trash");
         yesZone = GameObject.Find("Canvas/Valid");
-        //newsPaper = ;
     }
 
     void Update()
     {
+        newsPaper = GetComponent<NewsPaper>();
+
         if(isInDrag)
         {
             transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
