@@ -17,6 +17,7 @@ public class PauseMenu : MonoBehaviour
 
     private void OnReturnToMenu()
     {
+        gameObject.SetActive(false);
         Time.timeScale = 1.0f;
         SceneManager.LoadSceneAsync("TitleScreen");
     }
