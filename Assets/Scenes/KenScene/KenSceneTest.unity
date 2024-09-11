@@ -661,18 +661,18 @@ MonoBehaviour:
   dayNewsPapers:
   - newsPapers:
     - {fileID: 5366806664061282440, guid: 79789363b3a185e4ab9dce45415cfb80, type: 3}
-    - {fileID: 5366806664061282440, guid: e69f1604a57246046bed80ed8e5b47a8, type: 3}
+    - {fileID: 5366806664061282440, guid: ecaabc7b1fcefb640bdbc7f470f62ef8, type: 3}
     - {fileID: 5366806664061282440, guid: 79789363b3a185e4ab9dce45415cfb80, type: 3}
-    - {fileID: 5366806664061282440, guid: e69f1604a57246046bed80ed8e5b47a8, type: 3}
+    - {fileID: 5366806664061282440, guid: ecaabc7b1fcefb640bdbc7f470f62ef8, type: 3}
     - {fileID: 5366806664061282440, guid: 79789363b3a185e4ab9dce45415cfb80, type: 3}
-    - {fileID: 5366806664061282440, guid: e69f1604a57246046bed80ed8e5b47a8, type: 3}
+    - {fileID: 5366806664061282440, guid: ecaabc7b1fcefb640bdbc7f470f62ef8, type: 3}
   - newsPapers:
     - {fileID: 5366806664061282440, guid: 79789363b3a185e4ab9dce45415cfb80, type: 3}
-    - {fileID: 5366806664061282440, guid: e69f1604a57246046bed80ed8e5b47a8, type: 3}
+    - {fileID: 5366806664061282440, guid: ecaabc7b1fcefb640bdbc7f470f62ef8, type: 3}
     - {fileID: 5366806664061282440, guid: 79789363b3a185e4ab9dce45415cfb80, type: 3}
-    - {fileID: 5366806664061282440, guid: e69f1604a57246046bed80ed8e5b47a8, type: 3}
+    - {fileID: 5366806664061282440, guid: ecaabc7b1fcefb640bdbc7f470f62ef8, type: 3}
     - {fileID: 5366806664061282440, guid: 79789363b3a185e4ab9dce45415cfb80, type: 3}
-    - {fileID: 5366806664061282440, guid: e69f1604a57246046bed80ed8e5b47a8, type: 3}
+    - {fileID: 5366806664061282440, guid: ecaabc7b1fcefb640bdbc7f470f62ef8, type: 3}
   currentDayIndex: 0
 --- !u!1 &1168023200
 GameObject:
