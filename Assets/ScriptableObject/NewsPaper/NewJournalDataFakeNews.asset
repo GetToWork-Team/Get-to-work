@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2849a158ce3e884099d83931d2e527d, type: 3}
   m_Name: NewJournalDataFakeNews
   m_EditorClassIdentifier: 
-  isFakeNews: 1
+  isFakeNews: 0
   numberOfInformation: 3
   newsPaperTexture: {fileID: 0}

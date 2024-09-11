@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Button _PauseButton;
     [SerializeField] private GameObject _PauseMenu;
 
+    [SerializeField] private Timer _Timer;
+    [SerializeField] private GameObject _GameOverMenu;
+
     private void Awake()
     {
         if(instance != null)
@@ -39,6 +42,9 @@ public class GameManager : MonoBehaviour
     {
         EndOfDayTask();
         TrashTest();
+        CheckGameOver();
+
+        Debug.Log(_Timer.isTimerEnding);
     }
 
     public void GenerateNewsPaper()
@@ -87,6 +93,15 @@ public class GameManager : MonoBehaviour
             _SelectedNewsPaper = null;
             Destroy(_CurrentNewsPaper.gameObject);
             GenerateNewsPaper();
+        }
+    }
+
+    private void CheckGameOver()
+    {
+        if (_Timer.isTimerEnding)
+        {
+            _GameOverMenu.SetActive(true);
+            _Timer.isTimerEnding = false;
         }
     }
 
