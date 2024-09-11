@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class GameManager : MonoBehaviour
     private NewsPaper _SelectedNewsPaper;
 
     [SerializeField] private GameObject _WinScreenPanel;
+
+    [SerializeField] private Button _PauseButton;
+    [SerializeField] private GameObject _PauseMenu;
 
     private void Awake()
     {
@@ -26,6 +30,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        _PauseButton.onClick.AddListener(OnPause);
         GenerateNewsPaper();
     }
 
@@ -84,5 +89,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    
+    private void OnPause()
+    {
+        _PauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+    }
 }

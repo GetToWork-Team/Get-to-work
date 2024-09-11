@@ -4,17 +4,19 @@ using UnityEngine.UI;
 
 public class TitleScreen : MonoBehaviour
 {
-    [SerializeField] Button PlayButton, CreditButton, QuitButton, SoundButton;
+    [SerializeField] private Button _PlayButton, _CreditButton, _QuitButton, _SoundButton,_SFXButton;
 
     private bool _SoundButtonActive = false;
-    [SerializeField] private GameObject _SoundSliders;
+    private bool _SFXButtonActive = false;
+    [SerializeField] private GameObject _SoundSliders,_SFXSlider;
 
     private void Start()
     {
-        PlayButton.onClick.AddListener(OnPlay);
-        CreditButton.onClick.AddListener(OnCredit);
-        QuitButton.onClick.AddListener(OnQuit);
-        SoundButton.onClick.AddListener(OnSoundButton);
+        _PlayButton.onClick.AddListener(OnPlay);
+        _CreditButton.onClick.AddListener(OnCredit);
+        _QuitButton.onClick.AddListener(OnQuit);
+        _SoundButton.onClick.AddListener(OnSoundButton);
+        _SFXButton.onClick.AddListener(OnSFXButton);
     }
 
     private void OnPlay()
@@ -42,11 +44,19 @@ public class TitleScreen : MonoBehaviour
         else { _SoundSliders.SetActive(false);}
     }
 
+    private void OnSFXButton()
+    {
+        _SFXButtonActive = !_SFXButtonActive;
+        if (_SFXButtonActive) {  _SFXSlider.SetActive(true); }
+        else { _SFXSlider.SetActive(false);}
+    }
+
     private void OnDisable()
     {
-        PlayButton.onClick.RemoveAllListeners();
-        CreditButton.onClick.RemoveAllListeners();
-        QuitButton.onClick.RemoveAllListeners();
-        SoundButton.onClick.RemoveAllListeners();
+        _PlayButton.onClick.RemoveAllListeners();
+        _CreditButton.onClick.RemoveAllListeners();
+        _QuitButton.onClick.RemoveAllListeners();
+        _SoundButton.onClick.RemoveAllListeners();
+        _SFXButton.onClick.RemoveAllListeners();
     }
 }
