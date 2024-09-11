@@ -1078,7 +1078,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1024380497
 RectTransform:
@@ -1502,6 +1502,8 @@ MonoBehaviour:
   _WinScreenPanel: {fileID: 248439423}
   _PauseButton: {fileID: 81872296}
   _PauseMenu: {fileID: 132422744}
+  _Timer: {fileID: 1821241195}
+  _GameOverMenu: {fileID: 1436644229}
 --- !u!4 &1381120922
 Transform:
   m_ObjectHideFlags: 0
@@ -1620,6 +1622,7 @@ MonoBehaviour:
   isPaused: 0
   timerDurationInSecond: 60
   timerUIElement: {fileID: 445784555}
+  isTimerEnding: 0
 --- !u!4 &1821241196
 Transform:
   m_ObjectHideFlags: 0

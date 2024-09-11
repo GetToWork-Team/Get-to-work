@@ -15,9 +15,12 @@ public class Timer : MonoBehaviour
     private float timePausedTotal = 0f;
     private float timePaused = 0f;
 
+    public bool isTimerEnding = false;
+
     // Start is called before the first frame update
     void Start()
     {
+        isTimerEnding = false;
         UpdateUI();
         timerDurationInSecond+=0.5f;//Used to add a second to the timer for a proper render
     }
@@ -50,6 +53,7 @@ public class Timer : MonoBehaviour
     private void Respond()
     {
         Debug.Log("TIMER FINISHED");
+        isTimerEnding = true;
     }
 
     private void UpdateUI()
