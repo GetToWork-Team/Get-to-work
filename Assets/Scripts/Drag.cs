@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Drag : MonoBehaviour
 {
     public float resetSpeed = 0.1f;
+
+    public float shakeSpeed = 1f;
+    public float shakeStrenght = 0.05f;
 
     private NewsPaper newsPaper;
     private GameObject moneySystemOBJ;
@@ -14,7 +19,6 @@ public class Drag : MonoBehaviour
     private Image intoxBar;
 
     private bool isInDrag = false;
-    private bool shouldReCenter = true;
     private Vector3 offset;
 
     private GameObject trashZone;
@@ -22,7 +26,8 @@ public class Drag : MonoBehaviour
 
     private GameManager gameManager => GameManager.instance;
 
-    
+    private byte state = 0; //0=center; 1=trash; 2=good;
+
 
     void Start()
     {
@@ -45,47 +50,38 @@ public class Drag : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (transform.position.x < trashZone.transform.position.x && !isInDrag)
+        //if (transform.position.x < trashZone.transform.position.x && !isInDrag)
+        if (transform.position.x < trashZone.transform.position.x)
         {
-            shouldReCenter = false;
-            gameManager.DestoyNewsPaper();
+            Shake();
+            state = 1;
+            //
             Debug.Log("To trash");
         }
         else if (transform.position.x > yesZone.transform.position.x)
         {
-            shouldReCenter = false;
-
-            if (!isInDrag)
-            {
-                if (newsPaper.isFakeNews)
-                {
-                    moneySystem.currentMoney += moneySystem.intoxMoneyReward;
-                    intoxBar.fillAmount += 0.1f;
-                    if(intoxBar.fillAmount > 1f)
-                    {
-                        // TO DO : GAME OVER
-                    }
-
-                    Debug.Log("intox");
-                    gameManager.DestoyNewsPaper();
-                }
-                else
-                {
-                    moneySystem.currentMoney += moneySystem.newsMoneyReward;
-                    intoxBar.fillAmount -= 0.05f;
-                    Debug.Log("news");
-                    gameManager.DestoyNewsPaper();
-                }
-            }
+            Shake();
+            state = 2;
             Debug.Log("To yes");
-            Debug.Log(moneySystem.currentMoney);
         }
         else
         {
-            shouldReCenter = true;
+            ResetRotation();
         }
     }
 
+    void Shake()
+    {
+        Quaternion rotation = transform.rotation;
+        rotation.z = Mathf.Cos(Time.fixedTime * shakeSpeed) * shakeStrenght;
+        transform.rotation = rotation;
+    }
+    void ResetRotation()
+    {
+        Quaternion rotation = transform.rotation;
+        rotation.z = 0f;
+        transform.rotation = rotation;
+    }
 
     IEnumerator ResetPosition()
     {
@@ -101,7 +97,6 @@ public class Drag : MonoBehaviour
     }
 
 
-
     private void OnMouseDown()
     {
         offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -111,9 +106,35 @@ public class Drag : MonoBehaviour
     private void OnMouseUp()
     {
         isInDrag = false;
-        if(shouldReCenter)
+        switch(state)
         {
-            StartCoroutine(ResetPosition());
+            case 1:
+                gameManager.DestoyNewsPaper();
+                break;
+            case 2:
+                if (newsPaper.isFakeNews)
+                {
+                    moneySystem.currentMoney += moneySystem.intoxMoneyReward;
+                    intoxBar.fillAmount += 0.1f;
+                    if (intoxBar.fillAmount > 1f)
+                    {
+                        // TO DO : GAME OVER
+                    }
+
+                    Debug.Log("intox");
+                    gameManager.DestoyNewsPaper();
+                }
+                else
+                {
+                    moneySystem.currentMoney += moneySystem.newsMoneyReward;
+                    intoxBar.fillAmount -= 0.05f;
+                    Debug.Log("news");
+                    gameManager.DestoyNewsPaper();
+                }
+                break;
+            default:
+                StartCoroutine(ResetPosition());
+                break;
         }
     }
 
