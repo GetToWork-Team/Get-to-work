@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _PauseButton.onClick.AddListener(OnPause);
+        WinScreenPanel.onNextDayButton.AddListener(GenerateNewsPaper);
         GenerateNewsPaper();
     }
 
@@ -58,7 +59,7 @@ public class GameManager : MonoBehaviour
         int lRandom = Random.Range(0, levelManager.dayNewsPapers[levelManager.currentDayIndex].newsPapers.Count);
         _SelectedNewsPaper = levelManager.dayNewsPapers[levelManager.currentDayIndex].newsPapers[lRandom];
         _CurrentNewsPaper = Instantiate(_SelectedNewsPaper, NewsPaperSpawnPosition.position, Quaternion.identity,NewsPaperContainer);
-        //levelManager.dayNewsPapers[levelManager.currentDayIndex].newsPapers.Remove(_SelectedNewsPaper);
+        Debug.Log(_CurrentNewsPaper);
     }
 
     private void EndOfDayTask()
