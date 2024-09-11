@@ -2,37 +2,69 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class DialogueSystem : MonoBehaviour
 {
     public TextMeshProUGUI TMP;
-    public float speedBetweenletterInSecond = 0.1f;
-    [TextArea(5, 5)]
-    public string textToDisplay = "";
+    public float speedBetweenLetterInSecond = 0.1f;
+    [TextArea(5, 5)] public string[] textToDisplay;
 
-    private bool finished = false;
+    [SerializeField] private bool finished = false;
     private string displayedText = "";
     private int position = 0;
+    private int tablePosition = 0;
     private float preTime = 0f;
 
     void Start()
     {
         TMP.text = "";
-        preTime = speedBetweenletterInSecond;
+        preTime = speedBetweenLetterInSecond;
     }
 
     void FixedUpdate()
     {
         if (!finished)
         {
-            if (preTime + speedBetweenletterInSecond <= Time.fixedTime)
+            if (preTime + speedBetweenLetterInSecond <= Time.fixedTime)
             {
-                displayedText += textToDisplay[position];
+                preTime = Time.fixedTime;
+                displayedText += textToDisplay[tablePosition][position];
                 position++;
                 TMP.text = displayedText;
-                if (position == textToDisplay.Length)
+                if (position == textToDisplay[tablePosition].Length)
                     finished = true;
             }
         }
     }
+
+    //--------------------------------------------------
+    // Handle Mouse Click
+    //--------------------------------------------------
+    private void OnMouseDown()
+    {
+        if (!finished)
+        {
+            finished = true;
+            TMP.text = textToDisplay[tablePosition];
+        }
+        else
+        {
+            if (tablePosition < (textToDisplay.Length - 1))
+            {
+                finished = false;
+                preTime = Time.fixedTime + speedBetweenLetterInSecond;
+                displayedText = "";
+                TMP.text = "";
+                position = 0;
+                tablePosition++;
+            }
+            else
+            {
+                //END OF DIALOGUE;
+            }
+        }
+
+    }
+    //--------------------------------------------------
 }
