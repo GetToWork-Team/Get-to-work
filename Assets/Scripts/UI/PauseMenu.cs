@@ -8,18 +8,17 @@ public class PauseMenu : MonoBehaviour
 
     private void OnEnable()
     {
-        _ReturnToMain.onClick.AddListener(OnReturnToMenu);
+        _ReturnToMain.onClick.AddListener(OnReturnToGame);
     }
     private void OnDisable()
     {
         _ReturnToMain.onClick.RemoveAllListeners();
     }
 
-    private void OnReturnToMenu()
+    private void OnReturnToGame()
     {
         gameObject.SetActive(false);
         Time.timeScale = 1.0f;
-        SceneManager.LoadSceneAsync("TitleScreen");
     }
 
     

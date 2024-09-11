@@ -17,6 +17,7 @@ public class WinScreenPanel : MonoBehaviour
 
     private void NextDay()
     {
+        
         onNextDayButton?.Invoke();
         gameObject.SetActive(false);
     }
