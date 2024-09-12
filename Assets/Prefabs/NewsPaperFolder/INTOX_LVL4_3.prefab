@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5366806664061282440}
   - component: {fileID: 456045509247774316}
   - component: {fileID: 9097704570485711041}
-  - component: {fileID: 6576095668206190944}
+  - component: {fileID: 6363914691265158704}
   m_Layer: 0
-  m_Name: INTOX_6
+  m_Name: INTOX_LVL4_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _SpriteRenderer: {fileID: 0}
-  newsPaperScriptableObject: {fileID: 11400000, guid: eb057c4ab93aba840b022a2cf3a202f1, type: 2}
+  newsPaperScriptableObject: {fileID: 11400000, guid: 236817a22487f0642a1747be113e9c0e, type: 2}
   isFakeNews: 0
   newspaperTexture2D: {fileID: 0}
 --- !u!114 &456045509247774316
@@ -112,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.492961, y: 8.44273}
   m_EdgeRadius: 0
---- !u!95 &6576095668206190944
+--- !u!95 &6363914691265158704
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -206,7 +206,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2ff67909c1eb41045bf3c4d1c6ed7fe6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 39c9eba4022265748bc63697b0bcf3dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
