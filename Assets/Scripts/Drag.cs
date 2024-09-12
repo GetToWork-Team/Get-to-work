@@ -12,8 +12,6 @@ public class Drag : MonoBehaviour
     private NewsPaper newsPaper;
     private GameObject moneySystemOBJ;
     private MoneySystem moneySystem;
-    private GameObject intoxBarOBJ;
-    private Image intoxBar;
 
     private bool isInDrag = false;
     private Vector3 offset;
@@ -28,8 +26,6 @@ public class Drag : MonoBehaviour
 
     void Start()
     {
-        intoxBarOBJ = GameObject.Find("UI Canvas/Background/IntoxBar");
-        intoxBar = intoxBarOBJ.GetComponent<Image>();
         moneySystemOBJ = GameObject.Find("MoneySystem");
         moneySystem = moneySystemOBJ.GetComponent<MoneySystem>();
         trashZone = GameObject.Find("Canvas/Trash");
@@ -112,20 +108,17 @@ public class Drag : MonoBehaviour
                 if (newsPaper.isFakeNews)
                 {
                     moneySystem.currentMoney += moneySystem.intoxMoneyReward;
-                    intoxBar.fillAmount += 0.1f;
-                    if (intoxBar.fillAmount > 1f)
-                    {
-                        // TO DO : GAME OVER
-                    }
-
-                    Debug.Log("intox");//TODO Remove Debug
+                    moneySystem.intoxPercentage += 20f;
+                    Debug.Log(moneySystem.intoxPercentage);
+                    Debug.Log("intox");
                     gameManager.DestoyNewsPaper();
                 }
                 else
                 {
                     moneySystem.currentMoney += moneySystem.newsMoneyReward;
-                    intoxBar.fillAmount -= 0.05f;
-                    Debug.Log("news");//TODO Remove Debug
+                    moneySystem.intoxPercentage -= 5f;
+                    Debug.Log(moneySystem.intoxPercentage);
+                    Debug.Log("news");
                     gameManager.DestoyNewsPaper();
                 }
                 break;

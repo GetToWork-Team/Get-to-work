@@ -10,4 +10,5 @@ public class MoneySystem : MonoBehaviour
     public float moneyGoal;
     public float newsMoneyReward;
     public float intoxMoneyReward;
+    public float intoxPercentage;
 }
