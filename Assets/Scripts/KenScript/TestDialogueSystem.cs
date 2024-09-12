@@ -18,7 +18,13 @@ public class TestDialogueSystem : MonoBehaviour
         TMP.text = "";
     }
 
-    // Coroutine to handle the text display
+    private void Update()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            OnNextDialogue();
+        }
+    }
     private IEnumerator DisplayText()
     {
         finished = false;
@@ -41,7 +47,7 @@ public class TestDialogueSystem : MonoBehaviour
     //--------------------------------------------------
     // Handle Mouse Click
     //--------------------------------------------------
-    private void OnMouseDown()
+    private void OnNextDialogue()
     {
         if (!finished)
         {
@@ -59,6 +65,7 @@ public class TestDialogueSystem : MonoBehaviour
             else
             {
                 // END OF DIALOGUE;
+                gameObject.SetActive(false);
             }
         }
     }

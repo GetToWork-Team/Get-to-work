@@ -14,6 +14,6 @@ public class GameOverScreen : MonoBehaviour
     private void OnReturnButton()
     {
         gameObject.SetActive(false);
-        SceneManager.LoadSceneAsync("GameScene");
+        SceneManager.LoadSceneAsync("TitleScreen");
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {   
-    public bool isPaused = false;
+    public bool isPaused = true;
     public float timerDurationInSecond = 0f;
     public TextMeshProUGUI timerUIElement;
 
@@ -24,6 +24,7 @@ public class Timer : MonoBehaviour
         UpdateUI();
         timerDurationInSecond+=0.5f;//Used to add a second to the timer for a proper render
         timePausedTotal = Time.fixedTime;
+        GameManager.startGameEvent.AddListener(StartTimer);
     }
 
     void FixedUpdate()
@@ -75,5 +76,10 @@ public class Timer : MonoBehaviour
         timerDurationInSecond = newTime;
 
         Start();
+    }
+
+    public void StartTimer()
+    {
+        isPaused = false;
     }
 }

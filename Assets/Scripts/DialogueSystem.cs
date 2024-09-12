@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -62,6 +63,9 @@ public class DialogueSystem : MonoBehaviour
             else
             {
                 //END OF DIALOGUE;
+                GameManager.startDitacticiel?.Invoke();
+                gameObject.SetActive(false);
+                Array.Clear(textToDisplay, 0, textToDisplay.Length);
             }
         }
 
