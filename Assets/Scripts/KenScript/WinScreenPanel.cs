@@ -8,7 +8,8 @@ public class WinScreenPanel : MonoBehaviour
     public MoneySystem money;
 
     public TextMeshProUGUI saving;
-    public TextMeshProUGUI wage;
+    public TextMeshProUGUI moneyWinWithNews;
+    public TextMeshProUGUI moneyWinWithIntox;
     public TextMeshProUGUI intoxRep;
     public TextMeshProUGUI total;
 
@@ -32,19 +33,21 @@ public class WinScreenPanel : MonoBehaviour
             money.intoxPercentage = 0f;
         }
 
-        saving.SetText("Economies : " + money.saving.ToString());
-        wage.SetText("Argent gagné : " + money.currentMoney.ToString());
-        intoxRep.SetText("Intox Réputation : " + money.intoxPercentage.ToString() + " %");
+        saving.SetText(money.saving.ToString());
+        moneyWinWithNews.SetText(money.moneyWinNews.ToString());
+        moneyWinWithIntox.SetText(money.moneyWinIntox.ToString());
+        intoxRep.SetText(money.intoxPercentage.ToString() + " %");
         money.saving += money.currentMoney;
         money.currentMoney = 0f;
-        total.SetText("Total : " + money.saving.ToString());
+        money.moneyWinNews = 0f;
+        money.moneyWinIntox = 0f;
+        total.SetText(money.saving.ToString());
 
         if (money.intoxPercentage >= 100f)
         {
             GameOverIntox.SetActive(true);
             gameObject.SetActive(false);
         }
-
     }
 
     private void OnDisable()

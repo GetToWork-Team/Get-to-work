@@ -719,6 +719,14 @@ PrefabInstance:
       propertyPath: GameOverIntox
       value: 
       objectReference: {fileID: 1504113251}
+    - target: {fileID: 6199796760122022772, guid: 0199e6428de4bd047961a45a88ed15e2, type: 3}
+      propertyPath: moneyWinWithNews
+      value: 
+      objectReference: {fileID: 1853340555}
+    - target: {fileID: 6199796760122022772, guid: 0199e6428de4bd047961a45a88ed15e2, type: 3}
+      propertyPath: moneyWinWithIntox
+      value: 
+      objectReference: {fileID: 871501735}
     - target: {fileID: 8338817744328731805, guid: 0199e6428de4bd047961a45a88ed15e2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1229,6 +1237,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 45175916837272577, guid: 2bd53eed9bf5ae848ad66452c1586544, type: 3}
   m_PrefabInstance: {fileID: 742009033}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &871501735 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2085535995392955539, guid: 0199e6428de4bd047961a45a88ed15e2, type: 3}
+  m_PrefabInstance: {fileID: 248439421}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &964303826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2203,6 +2222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentMoney: 0
+  moneyWinNews: 0
+  moneyWinIntox: 0
   saving: 0
   moneyGoal: 3000
   newsMoneyReward: 150
