@@ -888,7 +888,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &964303827
 RectTransform:
   m_ObjectHideFlags: 0
@@ -906,7 +906,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1249}
+  m_AnchoredPosition: {x: -0.020019531, y: -10.630005}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &964303828
@@ -1003,6 +1003,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c34354f7c3539004583074740b338829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moneySystem: {fileID: 0}
+  BadEnding: {fileID: 0}
+  BetterEnding: {fileID: 0}
   dayNewsPapers:
   - newsPapers:
     - {fileID: 5366806664061282440, guid: 36064a5fc128dd943bb74d7b5a8fffec, type: 3}
