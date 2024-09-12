@@ -69,4 +69,11 @@ public class ScreenShake : MonoBehaviour
 
         transform.localPosition = originalPosition;
     }
+
+    private void OnDisable()
+    {
+        StopCoroutine(ConstantShake());
+        StopCoroutine(ViolentShakeRoutine());
+        StopCoroutine(ViolentShake());
+    }
 }
