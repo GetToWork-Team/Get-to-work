@@ -23,6 +23,7 @@ public class Timer : MonoBehaviour
         isTimerEnding = false;
         UpdateUI();
         timerDurationInSecond+=0.5f;//Used to add a second to the timer for a proper render
+        timePausedTotal = Time.fixedTime;
     }
 
     void FixedUpdate()
