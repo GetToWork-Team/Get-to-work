@@ -18,7 +18,11 @@ public class Ditacticiel : MonoBehaviour
 
     private void OnCloseButton()
     {
-        gameObject.SetActive(false);
+        _DitacticielAnimator.SetTrigger("SetAway");
+    }
+
+    private void KillObject()
+    {
         GameManager.startGameEvent?.Invoke();
         Destroy(gameObject);
     }

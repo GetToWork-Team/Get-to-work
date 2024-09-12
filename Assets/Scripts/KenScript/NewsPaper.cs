@@ -15,7 +15,7 @@ public class NewsPaper : MonoBehaviour
 
     private void Start()
     {
-        _NewspaperAnimator = GetComponent<Animator>();
+        _NewspaperAnimator = GetComponentInChildren<Animator>();
         SetUpScriptableObjectNewsPaper(newsPaperScriptableObject);
         UpdateSprite();
         _NewspaperAnimator.SetTrigger("SetMove");

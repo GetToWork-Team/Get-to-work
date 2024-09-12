@@ -23,9 +23,11 @@ public class Drag : MonoBehaviour
 
     private byte state = 0; //0=center; 1=trash; 2=good;
 
+    private Animator _Animator;
 
     void Start()
     {
+        _Animator = GetComponentInChildren<Animator>();
         moneySystemOBJ = GameObject.Find("MoneySystem");
         moneySystem = moneySystemOBJ.GetComponent<MoneySystem>();
         trashZone = GameObject.Find("Canvas/Trash");
@@ -94,6 +96,7 @@ public class Drag : MonoBehaviour
 
         offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         isInDrag = true;
+        _Animator.SetTrigger("SetZoom");
     }
     
     private void OnMouseUp()
@@ -103,7 +106,8 @@ public class Drag : MonoBehaviour
         {
             case 1:
                 SoundManager.instance.PlayOneShootSound(SoundReference.instance.sfx_ThrowPaper, new Vector2(0, 0));
-                gameManager.DestoyNewsPaper();
+                _Animator.SetTrigger("SetThrow");
+                //gameManager.DestoyNewsPaper();
                 break;
             case 2:
                 SoundManager.instance.PlayOneShootSound(SoundReference.instance.sfx_KeepPaper, new Vector2(0, 0));
@@ -114,6 +118,7 @@ public class Drag : MonoBehaviour
                     moneySystem.intoxPercentage += 20f;
                     Debug.Log(moneySystem.intoxPercentage);
                     Debug.Log("intox");
+                    
                     gameManager.DestoyNewsPaper();
                 }
                 else

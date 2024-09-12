@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 4021806879661945101}
   - component: {fileID: 5366806664061282440}
   - component: {fileID: 456045509247774316}
-  - component: {fileID: 9097704570485711041}
-  - component: {fileID: 8177936732172957037}
+  - component: {fileID: 4456003669420408449}
   m_Layer: 0
   m_Name: INFO_1
   m_TagString: Untagged
@@ -67,7 +66,7 @@ MonoBehaviour:
   resetSpeed: 0.1
   shakeSpeed: 1
   shakeStrenght: 0.05
---- !u!61 &9097704570485711041
+--- !u!61 &4456003669420408449
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,7 +98,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017268658, y: -0.008633614}
+  m_Offset: {x: 0.020930767, y: 0.020929575}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -110,29 +109,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.492961, y: 8.44273}
+  m_Size: {x: 6.5673914, y: 8.702255}
   m_EdgeRadius: 0
---- !u!95 &8177936732172957037
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 27597308231549433}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f4768d0b74ecd644883aa79dc21a7bf4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7013813717637152368
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,6 +121,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7873261197871875428}
   - component: {fileID: 725511840864228256}
+  - component: {fileID: 531941299508874926}
+  - component: {fileID: 7097247532365547595}
   m_Layer: 0
   m_Name: PaperTexture
   m_TagString: Untagged
@@ -217,3 +197,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &531941299508874926
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7013813717637152368}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f4768d0b74ecd644883aa79dc21a7bf4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7097247532365547595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7013813717637152368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3384130b950747048bc9d84ae004bbcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
