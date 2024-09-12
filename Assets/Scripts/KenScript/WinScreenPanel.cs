@@ -12,6 +12,8 @@ public class WinScreenPanel : MonoBehaviour
     public TextMeshProUGUI intoxRep;
     public TextMeshProUGUI total;
 
+    public GameObject GameOverIntox;
+
     [SerializeField] private Button _NextDayButton;
     public static UnityEvent onNextDayButton = new UnityEvent();
 
@@ -39,7 +41,8 @@ public class WinScreenPanel : MonoBehaviour
 
         if (money.intoxPercentage >= 100f)
         {
-            // TO DO : GAME OVER
+            GameOverIntox.SetActive(true);
+            gameObject.SetActive(false);
         }
 
     }
