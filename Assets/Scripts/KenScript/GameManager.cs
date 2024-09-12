@@ -124,6 +124,7 @@ public class GameManager : MonoBehaviour
         _Ditacticiel.SetActive(true);
     }
 
+
     private void OnDestroy()
     {
         startGameEvent.RemoveAllListeners();
