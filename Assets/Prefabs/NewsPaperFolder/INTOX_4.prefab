@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _SpriteRenderer: {fileID: 0}
-  newsPaperScriptableObject: {fileID: 11400000, guid: a502cae873edcab44a24d12f88f0e958, type: 2}
+  newsPaperScriptableObject: {fileID: 11400000, guid: 236817a22487f0642a1747be113e9c0e, type: 2}
   isFakeNews: 0
   newspaperTexture2D: {fileID: 0}
 --- !u!114 &456045509247774316
