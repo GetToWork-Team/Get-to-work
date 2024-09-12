@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,6 +10,7 @@ public class TitleScreen : MonoBehaviour
     private bool _SoundButtonActive = false;
     private bool _SFXButtonActive = false;
     [SerializeField] private GameObject _SoundSliders,_SFXSlider;
+    [SerializeField] private Transition _Transition;
 
     private void Start()
     {
@@ -22,7 +24,10 @@ public class TitleScreen : MonoBehaviour
     private void OnPlay()
     {
         Debug.Log("LoadScene :  GameScene");
-        SceneManager.LoadScene("GameScene");
+        _Transition.gameObject.SetActive(true);
+        _Transition.FadeIn();
+        StartCoroutine(WaitForTransition());
+        
     }
 
     private void OnCredit()
@@ -58,5 +63,16 @@ public class TitleScreen : MonoBehaviour
         _QuitButton.onClick.RemoveAllListeners();
         _SoundButton.onClick.RemoveAllListeners();
         _SFXButton.onClick.RemoveAllListeners();
+    }
+
+    private IEnumerator WaitForTransition()
+    {
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene("GameScene");
+    }
+
+    private void OnDestroy()
+    {
+        StopCoroutine(WaitForTransition());
     }
 }
