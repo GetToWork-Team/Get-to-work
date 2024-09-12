@@ -1987,6 +1987,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6337390512961569099, guid: 0fcd3bdadc6373e4fa9fa6d7ed7d562f, type: 3}
+      propertyPath: _MusicSound.Path
+      value: event:/Music/mus_Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337390512961569099, guid: 0fcd3bdadc6373e4fa9fa6d7ed7d562f, type: 3}
+      propertyPath: _MusicSound.Guid.Data1
+      value: -238559828
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337390512961569099, guid: 0fcd3bdadc6373e4fa9fa6d7ed7d562f, type: 3}
+      propertyPath: _MusicSound.Guid.Data2
+      value: 1132763101
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337390512961569099, guid: 0fcd3bdadc6373e4fa9fa6d7ed7d562f, type: 3}
+      propertyPath: _MusicSound.Guid.Data3
+      value: 104563876
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337390512961569099, guid: 0fcd3bdadc6373e4fa9fa6d7ed7d562f, type: 3}
+      propertyPath: _MusicSound.Guid.Data4
+      value: -1341359759
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
