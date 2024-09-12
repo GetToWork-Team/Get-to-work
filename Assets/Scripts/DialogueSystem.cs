@@ -29,6 +29,9 @@ public class DialogueSystem : MonoBehaviour
         {
             if (preTime + speedBetweenLetterInSecond <= Time.fixedTime)
             {
+                //PLAY SOND HERE
+                SoundManager.instance.PlayOneShootSound(SoundReference.instance.sfx_VoiceText, new Vector2(0, 0));
+
                 preTime = Time.fixedTime;
                 displayedText += textToDisplay[tablePosition][position];
                 position++;

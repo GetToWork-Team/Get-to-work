@@ -9,7 +9,7 @@ public class WinScreenPanel : MonoBehaviour
 
     public TextMeshProUGUI saving;
     public TextMeshProUGUI wage;
-    public TextMeshProUGUI cost;
+    public TextMeshProUGUI intoxRep;
     public TextMeshProUGUI total;
 
     [SerializeField] private Button _NextDayButton;
@@ -25,13 +25,24 @@ public class WinScreenPanel : MonoBehaviour
     private void OnEnable()
     {
         _NextDayButton.onClick.AddListener(NextDay);
+
+        if (money.intoxPercentage < 0f)
+        {
+            money.intoxPercentage = 0f;
+        }
+
         saving.SetText("Economies : " + money.saving.ToString());
         wage.SetText("Argent gagné : " + money.currentMoney.ToString());
-        cost.SetText("Argent dépensé : " + money.cost.ToString());
+        intoxRep.SetText("Intox Réputation : " + money.intoxPercentage.ToString() + " %");
         money.saving += money.currentMoney;
         money.currentMoney = 0f;
-        money.saving -= money.cost;
         total.SetText("Total : " + money.saving.ToString());
+
+        if (money.intoxPercentage >= 100f)
+        {
+            // TO DO : GAME OVER
+        }
+
     }
 
     private void OnDisable()

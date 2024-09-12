@@ -12,8 +12,6 @@ public class Drag : MonoBehaviour
     private NewsPaper newsPaper;
     private GameObject moneySystemOBJ;
     private MoneySystem moneySystem;
-    private GameObject intoxBarOBJ;
-    private Image intoxBar;
 
     private bool isInDrag = false;
     private Vector3 offset;
@@ -28,8 +26,6 @@ public class Drag : MonoBehaviour
 
     void Start()
     {
-        intoxBarOBJ = GameObject.Find("UI Canvas/Background/IntoxBar");
-        intoxBar = intoxBarOBJ.GetComponent<Image>();
         moneySystemOBJ = GameObject.Find("MoneySystem");
         moneySystem = moneySystemOBJ.GetComponent<MoneySystem>();
         trashZone = GameObject.Find("Canvas/Trash");
@@ -47,19 +43,17 @@ public class Drag : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        //if (transform.position.x < trashZone.transform.position.x && !isInDrag)
         if (transform.position.x < trashZone.transform.position.x)
         {
             Shake();
             state = 1;
-            //
-            Debug.Log("To trash");
+            Debug.Log("To trash"); //TODO Remove Debug
         }
         else if (transform.position.x > yesZone.transform.position.x)
         {
             Shake();
             state = 2;
-            Debug.Log("To yes");
+            Debug.Log("To yes"); //TODO Remove Debug
         }
         else
         {
@@ -96,12 +90,14 @@ public class Drag : MonoBehaviour
 
     private void OnMouseDown()
     {
+        //PLAY SOUND HERE (may require a routine)
         offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         isInDrag = true;
     }
     
     private void OnMouseUp()
     {
+        //PLAY SOUND HERE (may require a routine)
         isInDrag = false;
         switch(state)
         {
@@ -112,19 +108,16 @@ public class Drag : MonoBehaviour
                 if (newsPaper.isFakeNews)
                 {
                     moneySystem.currentMoney += moneySystem.intoxMoneyReward;
-                    intoxBar.fillAmount += 0.1f;
-                    if (intoxBar.fillAmount > 1f)
-                    {
-                        // TO DO : GAME OVER
-                    }
-
+                    moneySystem.intoxPercentage += 20f;
+                    Debug.Log(moneySystem.intoxPercentage);
                     Debug.Log("intox");
                     gameManager.DestoyNewsPaper();
                 }
                 else
                 {
                     moneySystem.currentMoney += moneySystem.newsMoneyReward;
-                    intoxBar.fillAmount -= 0.05f;
+                    moneySystem.intoxPercentage -= 5f;
+                    Debug.Log(moneySystem.intoxPercentage);
                     Debug.Log("news");
                     gameManager.DestoyNewsPaper();
                 }
