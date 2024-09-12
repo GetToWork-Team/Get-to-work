@@ -17,6 +17,8 @@ public class DialogueSystem : MonoBehaviour
     private int tablePosition = 0;
     private float preTime = 0f;
 
+    [SerializeField] private Transition _Transition;
+
     void Start()
     {
         TMP.text = "";
@@ -66,12 +68,25 @@ public class DialogueSystem : MonoBehaviour
             else
             {
                 //END OF DIALOGUE;
-                GameManager.startDitacticiel?.Invoke();
-                gameObject.SetActive(false);
-                Array.Clear(textToDisplay, 0, textToDisplay.Length);
+                
+                _Transition.FadeOut();
+                StartCoroutine(WaitDidact());
+                
             }
         }
 
     }
     //--------------------------------------------------
+
+    private IEnumerator WaitDidact()
+    {
+        yield return new WaitForSeconds(1.2f);
+        GameManager.startDitacticiel?.Invoke();
+        Array.Clear(textToDisplay, 0, textToDisplay.Length);
+    }
+
+    private void OnDestroy()
+    {
+        StopCoroutine(WaitDidact());
+    }
 }
