@@ -242,10 +242,10 @@ MonoBehaviour:
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   switchSettingsMigration: 1
-  HasSourceProject: 1
+  HasSourceProject: 0
   HasPlatforms: 1
   sourceProjectPath: ../Desktop/ISART/MS3/GameWeek_GetToWork/Fmod_GettToWork/Fmod_GetToWork.fspro
-  sourceBankPath: ../Desktop/ISART/MS3/GameWeek_GetToWork/Fmod_GettToWork/Build
+  sourceBankPath: ../Desktop/ISART/MS3/GameWeek_GetToWork/Fmod_GettToWork
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
