@@ -18,8 +18,19 @@ public class Ditacticiel : MonoBehaviour
 
     private void OnCloseButton()
     {
-        gameObject.SetActive(false);
+        _DitacticielAnimator.SetTrigger("SetAway");
+        StartCoroutine(WaitBeforeDestroy());
+        
+    }
+
+    private IEnumerator WaitBeforeDestroy()
+    {
+        yield return new WaitForSeconds(1);
         GameManager.startGameEvent?.Invoke();
+    }
+
+    private void KillObject()
+    {
         Destroy(gameObject);
     }
 }

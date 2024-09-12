@@ -13,6 +13,8 @@ public class NewsPaper : MonoBehaviour
 
     private Animator _NewspaperAnimator;
 
+    [SerializeField] private GameObject _AnimNewsPaperParent;
+
     private void Start()
     {
         _NewspaperAnimator = GetComponent<Animator>();
@@ -31,5 +33,10 @@ public class NewsPaper : MonoBehaviour
     {
         if (_SpriteRenderer) { _SpriteRenderer.sprite = newspaperTexture2D; }
         
+    }
+
+    public void ChangeParentForAnimation()
+    {
+        transform.parent = _AnimNewsPaperParent.transform;
     }
 }
