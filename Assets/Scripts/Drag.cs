@@ -94,24 +94,21 @@ public class Drag : MonoBehaviour
 
     private void OnMouseDown()
     {
-        SoundManager.instance.PlayOneShootSound(SoundReference.instance.sfx_GrabPaper, new Vector2(0, 0));
-
+        //PLAY SOUND HERE (may require a routine)
         offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         isInDrag = true;
     }
     
     private void OnMouseUp()
     {
+        //PLAY SOUND HERE (may require a routine)
         isInDrag = false;
         switch(state)
         {
             case 1:
-                SoundManager.instance.PlayOneShootSound(SoundReference.instance.sfx_ThrowPaper, new Vector2(0, 0));
                 gameManager.DestoyNewsPaper();
                 break;
             case 2:
-                SoundManager.instance.PlayOneShootSound(SoundReference.instance.sfx_KeepPaper, new Vector2(0, 0));
-
                 if (newsPaper.isFakeNews)
                 {
                     moneySystem.currentMoney += moneySystem.intoxMoneyReward;
