@@ -115,6 +115,7 @@ public class Drag : MonoBehaviour
                 if (newsPaper.isFakeNews)
                 {
                     moneySystem.currentMoney += moneySystem.intoxMoneyReward;
+                    moneySystem.moneyWinIntox += moneySystem.intoxMoneyReward;
                     moneySystem.intoxPercentage += 20f;
                     Debug.Log(moneySystem.intoxPercentage);
                     Debug.Log("intox");
@@ -124,6 +125,7 @@ public class Drag : MonoBehaviour
                 else
                 {
                     moneySystem.currentMoney += moneySystem.newsMoneyReward;
+                    moneySystem.moneyWinNews += moneySystem.newsMoneyReward;
                     moneySystem.intoxPercentage -= 5f;
                     Debug.Log(moneySystem.intoxPercentage);
                     Debug.Log("news");

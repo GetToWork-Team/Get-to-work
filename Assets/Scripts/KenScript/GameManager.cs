@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
         WinScreenPanel.onNextDayButton.AddListener(GenerateNewsPaper);
         //GenerateNewsPaper();
         startGameEvent.AddListener(GenerateNewsPaper);
+        startGameEvent.AddListener(StartTimer);
         startDitacticiel.AddListener(ShowDitacticiel);
     }
 
@@ -74,6 +75,10 @@ public class GameManager : MonoBehaviour
         _SelectedNewsPaper = levelManager.dayNewsPapers[levelManager.currentDayIndex].newsPapers[lRandom];
         _CurrentNewsPaper = Instantiate(_SelectedNewsPaper, NewsPaperSpawnPosition.position, Quaternion.identity,NewsPaperContainer);
         Debug.Log(_CurrentNewsPaper);
+    }
+    private void StartTimer()
+    {
+        levelManager.ResetDayTimer(levelManager.currentDayIndex);
     }
 
     private void EndOfDayTask()

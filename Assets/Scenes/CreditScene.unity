@@ -513,10 +513,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6119170756551502680, guid: b12f765fc8cabeb45b8c1542e525bb56, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1195227907}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b12f765fc8cabeb45b8c1542e525bb56, type: 3}
 --- !u!224 &966067071 stripped
 RectTransform:
@@ -528,7 +525,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4132385750895113628, guid: b12f765fc8cabeb45b8c1542e525bb56, type: 3}
   m_PrefabInstance: {fileID: 966067070}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1195227904}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -689,6 +686,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6337390512961569099, guid: 0fcd3bdadc6373e4fa9fa6d7ed7d562f, type: 3}
+      propertyPath: _MusicSound.Path
+      value: event:/Music/mus_GoodEnding
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337390512961569099, guid: 0fcd3bdadc6373e4fa9fa6d7ed7d562f, type: 3}
+      propertyPath: _MusicSound.Guid.Data1
+      value: 2056495457
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337390512961569099, guid: 0fcd3bdadc6373e4fa9fa6d7ed7d562f, type: 3}
+      propertyPath: _MusicSound.Guid.Data2
+      value: 1253364182
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337390512961569099, guid: 0fcd3bdadc6373e4fa9fa6d7ed7d562f, type: 3}
+      propertyPath: _MusicSound.Guid.Data3
+      value: -425340788
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337390512961569099, guid: 0fcd3bdadc6373e4fa9fa6d7ed7d562f, type: 3}
+      propertyPath: _MusicSound.Guid.Data4
+      value: 490703801
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -703,23 +720,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32296d213f8402e4c90cc2af6d8cb643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &1195227904 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6119170756551502680, guid: b12f765fc8cabeb45b8c1542e525bb56, type: 3}
-  m_PrefabInstance: {fileID: 966067070}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1195227907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1195227904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16d58cc47a80fe3498a2d792b9028ea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1250318807

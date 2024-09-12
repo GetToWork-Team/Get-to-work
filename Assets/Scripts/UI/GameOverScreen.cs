@@ -8,6 +8,7 @@ public class GameOverScreen : MonoBehaviour
 
     private void Start()
     {
+        SoundManager.instance.PlayOneShootSound(SoundReference.instance.sfx_Lose, new Vector2(0, 0));
         ReturnToMenuButton.onClick.AddListener(OnReturnButton);
     }
 
