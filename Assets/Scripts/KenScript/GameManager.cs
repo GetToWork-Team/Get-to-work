@@ -21,6 +21,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Timer _Timer;
     [SerializeField] private GameObject _GameOverMenu;
 
+
+    public static UnityEvent startGameEvent = new UnityEvent();
+    public static UnityEvent startDitacticiel = new UnityEvent();
+
+    [SerializeField] private GameObject _Ditacticiel;
+
     private void Awake()
     {
         if(instance != null)
@@ -35,7 +41,9 @@ public class GameManager : MonoBehaviour
     {
         _PauseButton.onClick.AddListener(OnPause);
         WinScreenPanel.onNextDayButton.AddListener(GenerateNewsPaper);
-        GenerateNewsPaper();
+        //GenerateNewsPaper();
+        startGameEvent.AddListener(GenerateNewsPaper);
+        startDitacticiel.AddListener(ShowDitacticiel);
     }
 
     private void Update()
@@ -109,5 +117,15 @@ public class GameManager : MonoBehaviour
     {
         _PauseMenu.SetActive(true);
         Time.timeScale = 0f;
+    }
+
+    private void ShowDitacticiel()
+    {
+        _Ditacticiel.SetActive(true);
+    }
+
+    private void OnDestroy()
+    {
+        startGameEvent.RemoveAllListeners();
     }
 }
