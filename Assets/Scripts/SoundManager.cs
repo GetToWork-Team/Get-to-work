@@ -1,4 +1,3 @@
-using Com.IsartDigital.Platerformer.Sound;
 using FMODUnity;
 using FMOD.Studio;
 using System.Collections.Generic;
@@ -14,21 +13,13 @@ public class SoundManager : MonoBehaviour
     [SerializeField] public float sfxVolume = 1f;
 
 
-    //private Bus _MasterBus;
-    //private Bus _MusicBus;
-    //private Bus _SfxBus;
-
-    //[Header("Ambience")]
-    //[SerializeField] private EventReference _AmbianceSound;
+  
 
     [Header("MainMenu")]
     [SerializeField] private EventReference _MusicSound;
     [Header("Fight")]
     [SerializeField] private EventReference _Boss;
     [SerializeField] private EventReference _Fight;
-
-    //[Header("Stinger")]
-    //[SerializeField] private EventReference _StingerSound;
 
     public static SoundManager instance;
 
@@ -38,27 +29,13 @@ public class SoundManager : MonoBehaviour
             print("SoundManager already existing in this scene");
 
         instance = this;
-
-        //_MasterBus = RuntimeManager.GetBus("bus:/");
-        //_MusicBus = RuntimeManager.GetBus("bus:/Music");
-        //_SfxBus = RuntimeManager.GetBus("bus:/SFX");
-
-        //_MasterBus.setVolume(StaticSettings.masterVolume);
-        //_MusicBus.setVolume(StaticSettings.musicVolume);
-        //_SfxBus.setVolume(StaticSettings.sfxVolume);
-
     }
 
     private void Start()
     {
-        //if (!_AmbianceSound.IsNull)
-        //    InitializedAbiance(_AmbianceSound);
-
         if (!_MusicSound.IsNull)
             InitializedMusic(_MusicSound);
 
-        //if (!_StingerSound.IsNull)
-        //    InitializedStinger(_StingerSound);
     }
 
     private void Update()

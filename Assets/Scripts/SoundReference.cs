@@ -1,4 +1,3 @@
-using Com.IsartDigital.Platerformer.Sound;
 using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,7 +15,7 @@ public class SoundReference : MonoBehaviour
         instance = this;
     }
 
-    [Header("SFX")]
+    /*[Header("SFX")]
     [SerializeField] public EventReference damageToPlayer;
     [SerializeField] public EventReference buttonPressed;
     [SerializeField] public EventReference damageToEnemy;
@@ -33,5 +32,26 @@ public class SoundReference : MonoBehaviour
     [Header("Jingle")]
     [SerializeField] public EventReference jingleWin;
     [SerializeField] public EventReference jingleDefeat;
-    [SerializeField] public EventReference Opening;
+    [SerializeField] public EventReference Opening;*/
+
+
+    [SerializeField] public EventReference amb_Subway;
+    [SerializeField] public EventReference mus_Day5;
+    [SerializeField] public EventReference mus_Game;
+    [SerializeField] public EventReference mus_Menu;
+    [SerializeField] public EventReference sfx_Chime;
+    [SerializeField] public EventReference sfx_DoorClose;
+    [SerializeField] public EventReference sfx_GrabPaper;
+    [SerializeField] public EventReference sfx_Info;
+    [SerializeField] public EventReference sfx_Intox;
+    [SerializeField] public EventReference sfx_KeepPaper;
+    [SerializeField] public EventReference sfx_Lose;
+    [SerializeField] public EventReference sfx_Phone;
+    [SerializeField] public EventReference sfx_ThrowPaper;
+    [SerializeField] public EventReference sfx_VoiceText;
+    [SerializeField] public EventReference sfx_WinDay;
+    [SerializeField] public EventReference ui_Click;
+    [SerializeField] public EventReference ui_Highlight;
+    [SerializeField] public EventReference ui_Play;
+
 }
