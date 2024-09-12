@@ -319,6 +319,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2692834865341053040, guid: b80900dc7f5b29a4fa3aebe2d4660ba0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692834865341053040, guid: b80900dc7f5b29a4fa3aebe2d4660ba0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692834865341053040, guid: b80900dc7f5b29a4fa3aebe2d4660ba0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1003458599}
+    - target: {fileID: 2692834865341053040, guid: b80900dc7f5b29a4fa3aebe2d4660ba0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692834865341053040, guid: b80900dc7f5b29a4fa3aebe2d4660ba0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnSfxSliderChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692834865341053040, guid: b80900dc7f5b29a4fa3aebe2d4660ba0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Settings, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2692834865341053040, guid: b80900dc7f5b29a4fa3aebe2d4660ba0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3005894341478777683, guid: b80900dc7f5b29a4fa3aebe2d4660ba0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -326,6 +354,34 @@ PrefabInstance:
     - target: {fileID: 5321298098065257781, guid: b80900dc7f5b29a4fa3aebe2d4660ba0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681198102179637438, guid: b80900dc7f5b29a4fa3aebe2d4660ba0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681198102179637438, guid: b80900dc7f5b29a4fa3aebe2d4660ba0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681198102179637438, guid: b80900dc7f5b29a4fa3aebe2d4660ba0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1003458599}
+    - target: {fileID: 5681198102179637438, guid: b80900dc7f5b29a4fa3aebe2d4660ba0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681198102179637438, guid: b80900dc7f5b29a4fa3aebe2d4660ba0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnMusicSliderChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681198102179637438, guid: b80900dc7f5b29a4fa3aebe2d4660ba0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Settings, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681198102179637438, guid: b80900dc7f5b29a4fa3aebe2d4660ba0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6479379345420016712, guid: b80900dc7f5b29a4fa3aebe2d4660ba0, type: 3}
       propertyPath: m_AnchorMax.y
