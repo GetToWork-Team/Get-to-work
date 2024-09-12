@@ -14,6 +14,7 @@ public class Transition : MonoBehaviour
 
     private void Update()
     {
+       
         if (fadeIn)
         {
             if(_CanvasGroup.alpha < 1)
@@ -29,13 +30,14 @@ public class Transition : MonoBehaviour
 
         if (fadeOut)
         {
-            if (_CanvasGroup.alpha >= 1)
+            if (_CanvasGroup.alpha >= 0)
             {
+                
                 _CanvasGroup.alpha -= fadeSpeed * Time.deltaTime;
                 if (_CanvasGroup.alpha == 0)
                 {
                     fadeOut = false;
-                    
+                    gameObject.SetActive(false);
 
                 }
             }

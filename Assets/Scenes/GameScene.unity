@@ -881,6 +881,7 @@ GameObject:
   m_Component:
   - component: {fileID: 964303827}
   - component: {fileID: 964303828}
+  - component: {fileID: 964303829}
   m_Layer: 5
   m_Name: DitacticielPanel
   m_TagString: Untagged
@@ -905,7 +906,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -1249}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &964303828
@@ -921,6 +922,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _CloseButton: {fileID: 1167725496}
+--- !u!95 &964303829
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964303826}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d89fe104e1099e34fb4f1f192b10f35b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &970492530
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,7 +968,7 @@ Transform:
   m_GameObject: {fileID: 970492530}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -10.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1659,11 +1681,44 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1616903271 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7695668404042295917, guid: 1804188385301de44a03988de547afbd, type: 3}
+  m_PrefabInstance: {fileID: 1982095738751928291}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1660516516 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5312907505079601969, guid: 1804188385301de44a03988de547afbd, type: 3}
   m_PrefabInstance: {fileID: 1982095738751928291}
   m_PrefabAsset: {fileID: 0}
+--- !u!225 &1660516517
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616903271}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1660516518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616903271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 406a357199fa642459cb85725f958a12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CanvasGroup: {fileID: 1660516517}
+  fadeIn: 0
+  fadeOut: 0
+  fadeSpeed: 0.5
 --- !u!1 &1821241194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1946,6 +2001,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1024380497}
     m_Modifications:
+    - target: {fileID: 1912219578906112173, guid: 1804188385301de44a03988de547afbd, type: 3}
+      propertyPath: _Transition
+      value: 
+      objectReference: {fileID: 1660516518}
     - target: {fileID: 4356898819051130875, guid: 1804188385301de44a03988de547afbd, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -18.679932
@@ -2041,7 +2100,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7695668404042295917, guid: 1804188385301de44a03988de547afbd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1660516518}
+    - targetCorrespondingSourceObject: {fileID: 7695668404042295917, guid: 1804188385301de44a03988de547afbd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1660516517}
   m_SourcePrefab: {fileID: 100100000, guid: 1804188385301de44a03988de547afbd, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

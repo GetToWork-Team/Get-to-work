@@ -23,17 +23,18 @@ public class TitleScreen : MonoBehaviour
 
     private void OnPlay()
     {
-        Debug.Log("LoadScene :  GameScene");
+        
         _Transition.gameObject.SetActive(true);
         _Transition.FadeIn();
-        StartCoroutine(WaitForTransition());
+        StartCoroutine(WaitForTransition("GameScene"));
         
     }
 
     private void OnCredit()
     {
-        Debug.Log("LoadScene :  Credit");
-        SceneManager.LoadSceneAsync("CreditScene");
+        _Transition.gameObject.SetActive(true);
+        _Transition.FadeIn();
+        StartCoroutine(WaitForTransition("CreditScene"));
     }
 
     private void OnQuit()
@@ -65,14 +66,15 @@ public class TitleScreen : MonoBehaviour
         _SFXButton.onClick.RemoveAllListeners();
     }
 
-    private IEnumerator WaitForTransition()
+    private IEnumerator WaitForTransition(string pName)
     {
         yield return new WaitForSeconds(2.0f);
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene(pName);
     }
 
     private void OnDestroy()
     {
-        StopCoroutine(WaitForTransition());
+        StopCoroutine(WaitForTransition("GameScene"));
+        StopCoroutine(WaitForTransition("CreditScene"));
     }
 }

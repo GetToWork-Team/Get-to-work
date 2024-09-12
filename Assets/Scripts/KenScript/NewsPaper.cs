@@ -11,11 +11,14 @@ public class NewsPaper : MonoBehaviour
     public bool isFakeNews;
     public Sprite newspaperTexture2D;
 
+    private Animator _NewspaperAnimator;
 
     private void Start()
     {
+        _NewspaperAnimator = GetComponent<Animator>();
         SetUpScriptableObjectNewsPaper(newsPaperScriptableObject);
         UpdateSprite();
+        _NewspaperAnimator.SetTrigger("SetMove");
     }
 
     public void SetUpScriptableObjectNewsPaper(NewsPaperScriptableObject pNewsPaperScriptableObject)
