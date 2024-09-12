@@ -121,7 +121,7 @@ public class GameManager : MonoBehaviour
     private void OnPause()
     {
         _PauseMenu.SetActive(true);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
     }
 
     private void ShowDitacticiel()
