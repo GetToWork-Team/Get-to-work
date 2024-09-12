@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2999954647714821756}
   - component: {fileID: 6337390512961569099}
   - component: {fileID: 2184267474611595026}
-  - component: {fileID: 6660952071454992600}
+  - component: {fileID: 810403857837636847}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -208,7 +208,7 @@ MonoBehaviour:
       Data3: -1957704569
       Data4: 527801129
     Path: event:/UI/ui_Play
---- !u!114 &6660952071454992600
+--- !u!114 &810403857837636847
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
