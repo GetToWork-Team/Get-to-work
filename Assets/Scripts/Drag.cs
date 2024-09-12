@@ -23,9 +23,11 @@ public class Drag : MonoBehaviour
 
     private byte state = 0; //0=center; 1=trash; 2=good;
 
+    private Animator _Animator;
 
     void Start()
     {
+        _Animator = GetComponentInChildren<Animator>();
         moneySystemOBJ = GameObject.Find("MoneySystem");
         moneySystem = moneySystemOBJ.GetComponent<MoneySystem>();
         trashZone = GameObject.Find("Canvas/Trash");
@@ -90,32 +92,40 @@ public class Drag : MonoBehaviour
 
     private void OnMouseDown()
     {
-        //PLAY SOUND HERE (may require a routine)
+        SoundManager.instance.PlayOneShootSound(SoundReference.instance.sfx_GrabPaper, new Vector2(0, 0));
+
         offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         isInDrag = true;
+        _Animator.SetTrigger("SetZoom");
     }
     
     private void OnMouseUp()
     {
-        //PLAY SOUND HERE (may require a routine)
         isInDrag = false;
         switch(state)
         {
             case 1:
-                gameManager.DestoyNewsPaper();
+                SoundManager.instance.PlayOneShootSound(SoundReference.instance.sfx_ThrowPaper, new Vector2(0, 0));
+                _Animator.SetTrigger("SetThrow");
+                //gameManager.DestoyNewsPaper();
                 break;
             case 2:
+                SoundManager.instance.PlayOneShootSound(SoundReference.instance.sfx_KeepPaper, new Vector2(0, 0));
+
                 if (newsPaper.isFakeNews)
                 {
                     moneySystem.currentMoney += moneySystem.intoxMoneyReward;
+                    moneySystem.moneyWinIntox += moneySystem.intoxMoneyReward;
                     moneySystem.intoxPercentage += 20f;
                     Debug.Log(moneySystem.intoxPercentage);
                     Debug.Log("intox");
+                    
                     gameManager.DestoyNewsPaper();
                 }
                 else
                 {
                     moneySystem.currentMoney += moneySystem.newsMoneyReward;
+                    moneySystem.moneyWinNews += moneySystem.newsMoneyReward;
                     moneySystem.intoxPercentage -= 5f;
                     Debug.Log(moneySystem.intoxPercentage);
                     Debug.Log("news");

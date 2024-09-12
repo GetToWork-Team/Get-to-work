@@ -13,8 +13,6 @@ public class SoundManager : MonoBehaviour
     [SerializeField] public float sfxVolume = 1f;
 
 
-  
-
     [Header("MainMenu")]
     [SerializeField] private EventReference _MusicSound;
     [Header("Fight")]
@@ -31,19 +29,26 @@ public class SoundManager : MonoBehaviour
         instance = this;
     }
 
+    private string vcaMusicPath = "vca:/Music";
+    private string vcaSfxPath = "vca:/SFX";
+    private VCA vcaMusic, vcaSFX;
+
     private void Start()
     {
         if (!_MusicSound.IsNull)
             InitializedMusic(_MusicSound);
 
+        vcaMusic = RuntimeManager.GetVCA(vcaMusicPath);
+        vcaSFX = RuntimeManager.GetVCA(vcaSfxPath);
+        
     }
 
     private void Update()
     {
-        //_MasterBus.setVolume(masterVolume);
-        //_MusicBus.setVolume(musicVolume);
-        //_SfxBus.setVolume(sfxVolume);
+        vcaMusic.setVolume(musicVolume);
+        vcaSFX.setVolume(sfxVolume);
     }
+    
 
     #region PlayOneShoot
     /// <summary>
