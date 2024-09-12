@@ -47,19 +47,17 @@ public class Drag : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        //if (transform.position.x < trashZone.transform.position.x && !isInDrag)
         if (transform.position.x < trashZone.transform.position.x)
         {
             Shake();
             state = 1;
-            //
-            Debug.Log("To trash");
+            Debug.Log("To trash"); //TODO Remove Debug
         }
         else if (transform.position.x > yesZone.transform.position.x)
         {
             Shake();
             state = 2;
-            Debug.Log("To yes");
+            Debug.Log("To yes"); //TODO Remove Debug
         }
         else
         {
@@ -96,12 +94,14 @@ public class Drag : MonoBehaviour
 
     private void OnMouseDown()
     {
+        //PLAY SOUND HERE (may require a routine)
         offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         isInDrag = true;
     }
     
     private void OnMouseUp()
     {
+        //PLAY SOUND HERE (may require a routine)
         isInDrag = false;
         switch(state)
         {
@@ -118,14 +118,14 @@ public class Drag : MonoBehaviour
                         // TO DO : GAME OVER
                     }
 
-                    Debug.Log("intox");
+                    Debug.Log("intox");//TODO Remove Debug
                     gameManager.DestoyNewsPaper();
                 }
                 else
                 {
                     moneySystem.currentMoney += moneySystem.newsMoneyReward;
                     intoxBar.fillAmount -= 0.05f;
-                    Debug.Log("news");
+                    Debug.Log("news");//TODO Remove Debug
                     gameManager.DestoyNewsPaper();
                 }
                 break;

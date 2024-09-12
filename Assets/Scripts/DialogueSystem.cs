@@ -28,6 +28,7 @@ public class DialogueSystem : MonoBehaviour
         {
             if (preTime + speedBetweenLetterInSecond <= Time.fixedTime)
             {
+                //PLAY SOND HERE
                 preTime = Time.fixedTime;
                 displayedText += textToDisplay[tablePosition][position];
                 position++;
