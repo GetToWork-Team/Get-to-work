@@ -6,6 +6,9 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
+    public MoneySystem moneySystem;
+    public GameObject BadEnding;
+    public GameObject BetterEnding;
 
     public List<DayNewsPapers> dayNewsPapers = new List<DayNewsPapers>();
     private List<DayNewsPapers> originalDayNewsPapers = new List<DayNewsPapers>();
@@ -16,7 +19,7 @@ public class LevelManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogError("Deux instannce de Level Manager type ne peuvent exister");
+            Debug.LogError("Deux instances de Level Manager type ne peuvent exister");
         }
         instance = this;
 
@@ -35,10 +38,30 @@ public class LevelManager : MonoBehaviour
     {
         WinScreenPanel.onNextDayButton.AddListener(ChangeToNextDay);
     }
+
+    private void ChooseEnding()
+    {
+        if (moneySystem.saving >= moneySystem.moneyGoal)
+        {
+            BetterEnding.SetActive(true);
+        }
+        else 
+        {
+            BadEnding.SetActive(true);
+        }
+    }
+
     public void ChangeToNextDay()
     {
         currentDayIndex++;
-        ResetDayNewsPapers(currentDayIndex);
+        if (currentDayIndex == 4)
+        {
+            ChooseEnding();
+        }
+        else
+        {
+            ResetDayNewsPapers(currentDayIndex);
+        }
     }
     public void Changedays(int Days)
     {
