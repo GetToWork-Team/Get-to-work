@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 45175916837272577}
   - component: {fileID: 7982893491176000313}
   m_Layer: 5
-  m_Name: GameOverScreen
+  m_Name: GameOverScreen 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
