@@ -1413,6 +1413,11 @@ MonoBehaviour:
     - {fileID: 5366806664061282440, guid: 8c7e77883af2e394890a7bec54d31b7b, type: 3}
     - {fileID: 5366806664061282440, guid: b62fe63d63d2e2a4f8cea4450bd41b6e, type: 3}
     - {fileID: 5366806664061282440, guid: e3e679231284dd446aa208a498518373, type: 3}
+  dayTimer:
+  - 90
+  - 75
+  - 60
+  - 45
   currentDayIndex: 0
 --- !u!4 &984470772
 Transform:
