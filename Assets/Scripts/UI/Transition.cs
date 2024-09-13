@@ -44,6 +44,12 @@ public class Transition : MonoBehaviour
         }
     }
 
+    public void Activate()
+    {
+        gameObject.SetActive(true);
+
+    }
+
     public void FadeIn()
     {
         fadeIn = true;

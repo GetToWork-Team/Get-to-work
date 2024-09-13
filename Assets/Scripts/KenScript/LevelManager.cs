@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -12,6 +13,13 @@ public class LevelManager : MonoBehaviour
 
     public List<DayNewsPapers> dayNewsPapers = new List<DayNewsPapers>();
     public List<float> dayTimer = new List<float>();
+
+    [TextArea(5, 5)] public string[] dialogueDay1;
+    [TextArea(5, 5)] public string[] dialogueDay2;
+    [TextArea(5, 5)] public string[] dialogueDay3;
+    [TextArea(5, 5)] public string[] dialogueDay4;
+    public List<string[]> dayDialogue = new List<string[]>();
+
     private List<DayNewsPapers> originalDayNewsPapers = new List<DayNewsPapers>();
     public int currentDayIndex;
 
@@ -37,6 +45,10 @@ public class LevelManager : MonoBehaviour
     }
     private void Start()
     {
+        dayDialogue.Add(dialogueDay1);
+        dayDialogue.Add(dialogueDay2);
+        dayDialogue.Add(dialogueDay3);
+        dayDialogue.Add(dialogueDay4);
         WinScreenPanel.onNextDayButton.AddListener(ChangeToNextDay);
     }
 
