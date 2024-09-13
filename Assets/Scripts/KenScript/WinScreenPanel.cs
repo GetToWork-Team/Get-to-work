@@ -26,6 +26,7 @@ public class WinScreenPanel : MonoBehaviour
 
     private void OnEnable()
     {
+        SoundManager.instance.PlayOneShootSound(SoundReference.instance.sfx_WinDay, new Vector2(0, 0));
         _NextDayButton.onClick.AddListener(NextDay);
 
         if (money.intoxPercentage < 0f)

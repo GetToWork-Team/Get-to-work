@@ -119,8 +119,10 @@ public class Drag : MonoBehaviour
                     moneySystem.intoxPercentage += 20f;
                     Debug.Log(moneySystem.intoxPercentage);
                     Debug.Log("intox");
+                    ResetObjectTransform();
+                    _Animator.SetTrigger("SetIntoPaper");
                     
-                    gameManager.DestoyNewsPaper();
+                    //gameManager.DestoyNewsPaper();
                 }
                 else
                 {
@@ -129,13 +131,21 @@ public class Drag : MonoBehaviour
                     moneySystem.intoxPercentage -= 5f;
                     Debug.Log(moneySystem.intoxPercentage);
                     Debug.Log("news");
-                    gameManager.DestoyNewsPaper();
+                    ResetObjectTransform();
+                    _Animator.SetTrigger("SetIntoPaper");
+                    //gameManager.DestoyNewsPaper();
                 }
                 break;
             default:
                 StartCoroutine(ResetPosition());
                 break;
         }
+    }
+
+    private void ResetObjectTransform()
+    {
+        transform.position = Vector3.zero;
+        transform.rotation = Quaternion.identity;
     }
 
 }

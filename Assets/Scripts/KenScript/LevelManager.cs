@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
     public GameObject BetterEnding;
 
     public List<DayNewsPapers> dayNewsPapers = new List<DayNewsPapers>();
+    public List<float> dayTimer = new List<float>();
     private List<DayNewsPapers> originalDayNewsPapers = new List<DayNewsPapers>();
     public int currentDayIndex;
 
@@ -61,12 +62,14 @@ public class LevelManager : MonoBehaviour
         else
         {
             ResetDayNewsPapers(currentDayIndex);
+            ResetDayTimer(currentDayIndex);
         }
     }
     public void Changedays(int Days)
     {
         currentDayIndex = Days;
         ResetDayNewsPapers(Days);
+        ResetDayTimer(Days);
     }
 
     public void ResetDayNewsPapers(int dayIndex)
@@ -79,6 +82,11 @@ public class LevelManager : MonoBehaviour
         
         dayNewsPapers[dayIndex].newsPapers = new List<NewsPaper>(originalDayNewsPapers[dayIndex].newsPapers);
         Debug.Log(dayNewsPapers[dayIndex].newsPapers);
+    }
+
+    public void ResetDayTimer(int dayIndex)
+    {
+        Timer.instance.ResetTimer(dayTimer[dayIndex]);
     }
   
 

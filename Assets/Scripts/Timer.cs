@@ -5,7 +5,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class Timer : MonoBehaviour
-{   
+{
+    public static Timer instance;
+
     public bool isPaused = true;
     public float timerDurationInSecond = 0f;
     public TextMeshProUGUI timerUIElement;
@@ -17,12 +19,19 @@ public class Timer : MonoBehaviour
 
     public bool isTimerEnding = false;
 
+
+    private void Awake()
+    {
+        if (instance == null) instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         isTimerEnding = false;
         UpdateUI();
         timerDurationInSecond+=0.5f;//Used to add a second to the timer for a proper render
+        timePausedTotal = Time.fixedTime;
         GameManager.startGameEvent.AddListener(StartTimer);
     }
 
