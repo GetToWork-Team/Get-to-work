@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4021806879661945101}
   - component: {fileID: 5366806664061282440}
   - component: {fileID: 456045509247774316}
-  - component: {fileID: 4456003669420408449}
+  - component: {fileID: 9097704570485711041}
   m_Layer: 0
-  m_Name: INFO_1
+  m_Name: INTOX_LVL4_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,9 +28,9 @@ Transform:
   m_GameObject: {fileID: 27597308231549433}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.0157, y: -0.028, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7873261197871875428}
   m_Father: {fileID: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _SpriteRenderer: {fileID: 0}
-  newsPaperScriptableObject: {fileID: 11400000, guid: dfa073dfdd07b864dbd513b568a0c8f4, type: 2}
+  newsPaperScriptableObject: {fileID: 11400000, guid: 812e523c2a0b62b4fa5bb189cf904f54, type: 2}
   isFakeNews: 0
   newspaperTexture2D: {fileID: 0}
 --- !u!114 &456045509247774316
@@ -66,7 +66,7 @@ MonoBehaviour:
   resetSpeed: 0.1
   shakeSpeed: 1
   shakeStrenght: 0.05
---- !u!61 &4456003669420408449
+--- !u!61 &9097704570485711041
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,7 +98,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.020930767, y: 0.020929575}
+  m_Offset: {x: -0.017268658, y: -0.008633614}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -109,7 +109,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.5673914, y: 8.702255}
+  m_Size: {x: 7.492961, y: 8.44273}
   m_EdgeRadius: 0
 --- !u!1 &7013813717637152368
 GameObject:
@@ -121,8 +121,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7873261197871875428}
   - component: {fileID: 725511840864228256}
-  - component: {fileID: 531941299508874926}
-  - component: {fileID: 7097247532365547595}
+  - component: {fileID: 6966717705963292873}
+  - component: {fileID: 2912271319237010512}
   m_Layer: 0
   m_Name: PaperTexture
   m_TagString: Untagged
@@ -140,8 +140,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4021806879661945101}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -186,7 +186,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 11cee73110685844792e9e6dfbc75fb4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 210db4e052fcc5c43a0a9b25e62b7699, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -197,7 +197,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &531941299508874926
+--- !u!95 &6966717705963292873
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -218,7 +218,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7097247532365547595
+--- !u!114 &2912271319237010512
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

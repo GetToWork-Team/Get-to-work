@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 456045509247774316}
   - component: {fileID: 9097704570485711041}
   m_Layer: 0
-  m_Name: INTOX_4
+  m_Name: INFO_LVL3_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _SpriteRenderer: {fileID: 0}
-  newsPaperScriptableObject: {fileID: 11400000, guid: a502cae873edcab44a24d12f88f0e958, type: 2}
+  newsPaperScriptableObject: {fileID: 11400000, guid: 236817a22487f0642a1747be113e9c0e, type: 2}
   isFakeNews: 0
   newspaperTexture2D: {fileID: 0}
 --- !u!114 &456045509247774316
@@ -121,8 +121,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7873261197871875428}
   - component: {fileID: 725511840864228256}
-  - component: {fileID: 5017439186252868615}
-  - component: {fileID: 4024620848746098521}
+  - component: {fileID: 130503214011356004}
+  - component: {fileID: 6030896365254314279}
   m_Layer: 0
   m_Name: PaperTexture
   m_TagString: Untagged
@@ -186,7 +186,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5e4c75ce3afdc1b4ba777f3720a7b469, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2dd9d06923beb046a554c2c589ed10e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -197,7 +197,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &5017439186252868615
+--- !u!95 &130503214011356004
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -218,7 +218,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4024620848746098521
+--- !u!114 &6030896365254314279
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
