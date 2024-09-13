@@ -18,6 +18,7 @@ public class LevelManager : MonoBehaviour
     [TextArea(5, 5)] public string[] dialogueDay2;
     [TextArea(5, 5)] public string[] dialogueDay3;
     [TextArea(5, 5)] public string[] dialogueDay4;
+    [TextArea(5, 5)] public string[] dialogueDay5;
     public List<string[]> dayDialogue = new List<string[]>();
 
     private List<DayNewsPapers> originalDayNewsPapers = new List<DayNewsPapers>();
@@ -49,6 +50,7 @@ public class LevelManager : MonoBehaviour
         dayDialogue.Add(dialogueDay2);
         dayDialogue.Add(dialogueDay3);
         dayDialogue.Add(dialogueDay4);
+        dayDialogue.Add(dialogueDay5);
         WinScreenPanel.onNextDayButton.AddListener(ChangeToNextDay);
     }
 

@@ -688,6 +688,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 248439424}
     - target: {fileID: 6199796760122022772, guid: 0199e6428de4bd047961a45a88ed15e2, type: 3}
+      propertyPath: dialogueSys
+      value: 
+      objectReference: {fileID: 1660516520}
+    - target: {fileID: 6199796760122022772, guid: 0199e6428de4bd047961a45a88ed15e2, type: 3}
       propertyPath: GameOverIntox
       value: 
       objectReference: {fileID: 1504113251}
@@ -1339,7 +1343,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ab74f3a2b42ea5945bb422ba172b2b44, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1403,7 +1407,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &871501735 stripped
@@ -1662,36 +1666,63 @@ MonoBehaviour:
   BetterEnding: {fileID: 1833592979}
   dayNewsPapers:
   - newsPapers:
-    - {fileID: 5366806664061282440, guid: e3e679231284dd446aa208a498518373, type: 3}
-    - {fileID: 5366806664061282440, guid: 0aaa04ff31dfc2640b2b1479d180ace3, type: 3}
-    - {fileID: 5366806664061282440, guid: dfe292a07354e144fbc2452fe12598ac, type: 3}
-    - {fileID: 5366806664061282440, guid: e3e01877294c08649916f8b5e9bd5aa9, type: 3}
     - {fileID: 5366806664061282440, guid: 7740a82565845814aaf20af289add69e, type: 3}
-  - newsPapers:
-    - {fileID: 5366806664061282440, guid: 3d9459d59a981bb489945562697aa28b, type: 3}
-    - {fileID: 5366806664061282440, guid: 8c7e77883af2e394890a7bec54d31b7b, type: 3}
+    - {fileID: 5366806664061282440, guid: 36064a5fc128dd943bb74d7b5a8fffec, type: 3}
+    - {fileID: 5366806664061282440, guid: 508257b6e856c82448e5a0f49fd63df3, type: 3}
+    - {fileID: 5366806664061282440, guid: 70d86c0934a32d94abe9a474f57c5497, type: 3}
+    - {fileID: 5366806664061282440, guid: 842f1d144e1d64a458bc20999b5f91c9, type: 3}
     - {fileID: 5366806664061282440, guid: a0f43af61150cbb478828b3d94ec457b, type: 3}
-    - {fileID: 5366806664061282440, guid: 33d7ef06ceb1ee24f99ce026733237c6, type: 3}
+    - {fileID: 5366806664061282440, guid: 489eb0e55850b9848b3fdc8d69acb2e5, type: 3}
+  - newsPapers:
+    - {fileID: 5366806664061282440, guid: 97b6f4de90555034d84ea782f9b86985, type: 3}
+    - {fileID: 5366806664061282440, guid: dfe292a07354e144fbc2452fe12598ac, type: 3}
+    - {fileID: 5366806664061282440, guid: 2516a0fcc27ec254d81e6539f8b66555, type: 3}
+    - {fileID: 5366806664061282440, guid: a3b5da20328738540979dc18228d09ca, type: 3}
+    - {fileID: 5366806664061282440, guid: 302252affd3e3a943b07aa17811a7c80, type: 3}
     - {fileID: 5366806664061282440, guid: e3e01877294c08649916f8b5e9bd5aa9, type: 3}
-  - newsPapers:
-    - {fileID: 5366806664061282440, guid: 33d7ef06ceb1ee24f99ce026733237c6, type: 3}
-    - {fileID: 5366806664061282440, guid: a87b3a99f03daab4f8a4ea342826402d, type: 3}
-    - {fileID: 5366806664061282440, guid: 8c7e77883af2e394890a7bec54d31b7b, type: 3}
     - {fileID: 5366806664061282440, guid: b62fe63d63d2e2a4f8cea4450bd41b6e, type: 3}
-    - {fileID: 5366806664061282440, guid: e3e679231284dd446aa208a498518373, type: 3}
+    - {fileID: 5366806664061282440, guid: 30a763a5dfd32854ba204547af9495a6, type: 3}
+    - {fileID: 5366806664061282440, guid: 57f6f166794c9254aaf1e4623ad7dbad, type: 3}
   - newsPapers:
+    - {fileID: 5366806664061282440, guid: e3e679231284dd446aa208a498518373, type: 3}
     - {fileID: 5366806664061282440, guid: 33d7ef06ceb1ee24f99ce026733237c6, type: 3}
+    - {fileID: 5366806664061282440, guid: 9a7400b42af5dd640bb1de9aba5336a5, type: 3}
+    - {fileID: 5366806664061282440, guid: 0b9265c83e595a54a9bf2c8378ca650b, type: 3}
+    - {fileID: 5366806664061282440, guid: 35c76780cfd1d77488501144aa8b3278, type: 3}
+    - {fileID: 5366806664061282440, guid: 0aaa04ff31dfc2640b2b1479d180ace3, type: 3}
+    - {fileID: 5366806664061282440, guid: 6ad5b0a80c362894f9155ba16749a3a1, type: 3}
+    - {fileID: 5366806664061282440, guid: 7859c2eb5d87ba448a0d006ed41ee540, type: 3}
+    - {fileID: 5366806664061282440, guid: fa8f16f47ad27a14b84b43082f32bf08, type: 3}
+  - newsPapers:
+    - {fileID: 5366806664061282440, guid: 8043762b52614ae41a8471bf831a879b, type: 3}
+    - {fileID: 5366806664061282440, guid: 14bc8f375717fc342b238cfd3476d445, type: 3}
+    - {fileID: 5366806664061282440, guid: e01e7b9a50c76bf4bbb29e9712e88647, type: 3}
+    - {fileID: 5366806664061282440, guid: 5a6d5f80bf392f14ea9c193618c9bc94, type: 3}
+    - {fileID: 5366806664061282440, guid: 3d9459d59a981bb489945562697aa28b, type: 3}
+    - {fileID: 5366806664061282440, guid: 92e3b0832387d9b48a857708d480d871, type: 3}
+    - {fileID: 5366806664061282440, guid: bdd57b7f7c721164fad56afd0d3e0684, type: 3}
     - {fileID: 5366806664061282440, guid: a87b3a99f03daab4f8a4ea342826402d, type: 3}
-    - {fileID: 5366806664061282440, guid: 8c7e77883af2e394890a7bec54d31b7b, type: 3}
-    - {fileID: 5366806664061282440, guid: b62fe63d63d2e2a4f8cea4450bd41b6e, type: 3}
-    - {fileID: 5366806664061282440, guid: e3e679231284dd446aa208a498518373, type: 3}
+    - {fileID: 5366806664061282440, guid: 1e5b454a82f400c45896c341a7f42483, type: 3}
+    - {fileID: 5366806664061282440, guid: 903cc49a03ce5654896a0dbef97a4c35, type: 3}
+    - {fileID: 5366806664061282440, guid: f960facd014c1e846bdb3f6a6501b04a, type: 3}
+    - {fileID: 5366806664061282440, guid: df5ff66e2791b534da64f2856e38c3e5, type: 3}
   - newsPapers:
-    - {fileID: 5366806664061282440, guid: 33d7ef06ceb1ee24f99ce026733237c6, type: 3}
+    - {fileID: 5366806664061282440, guid: 8043762b52614ae41a8471bf831a879b, type: 3}
   dayTimer:
   - 90
   - 75
   - 60
   - 45
+  dialogueDay1:
+  - q<zd
+  dialogueDay2:
+  - 
+  dialogueDay3:
+  - dq<ze
+  dialogueDay4:
+  - d<ded
+  dialogueDay5:
+  - 
   currentDayIndex: 0
 --- !u!4 &984470772
 Transform:
@@ -2387,6 +2418,7 @@ MonoBehaviour:
   _PauseMenu: {fileID: 132422744}
   _Timer: {fileID: 1821241195}
   _GameOverMenu: {fileID: 43873399}
+  dialogueSys: {fileID: 1660516520}
   _Ditacticiel: {fileID: 964303826}
 --- !u!4 &1381120922
 Transform:
@@ -2863,6 +2895,17 @@ MonoBehaviour:
   fadeIn: 0
   fadeOut: 0
   fadeSpeed: 0.5
+--- !u!114 &1660516520 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1912219578906112173, guid: 1804188385301de44a03988de547afbd, type: 3}
+  m_PrefabInstance: {fileID: 1982095738751928291}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616903271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f022bf06e13b2b6468bd268b556d0c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1672659983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2984,12 +3027,20 @@ PrefabInstance:
       value: 2.4317932
       objectReference: {fileID: 0}
     - target: {fileID: 1541868121417706520, guid: 01fc80f0d0f5caf42a821a966afb3604, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: ab74f3a2b42ea5945bb422ba172b2b44, type: 2}
+    - target: {fileID: 1541868121417706520, guid: 01fc80f0d0f5caf42a821a966afb3604, type: 3}
       propertyPath: m_VerticalAlignment
       value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 1541868121417706520, guid: 01fc80f0d0f5caf42a821a966afb3604, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541868121417706520, guid: 01fc80f0d0f5caf42a821a966afb3604, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2574609539709004963, guid: 01fc80f0d0f5caf42a821a966afb3604, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3668,6 +3719,18 @@ PrefabInstance:
     - target: {fileID: 1912219578906112173, guid: 1804188385301de44a03988de547afbd, type: 3}
       propertyPath: textToDisplay.Array.data[7]
       value: '(Patron) '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435090866978978462, guid: 1804188385301de44a03988de547afbd, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: ab74f3a2b42ea5945bb422ba172b2b44, type: 2}
+    - target: {fileID: 3435090866978978462, guid: 1804188385301de44a03988de547afbd, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2558301021152679026, guid: ab74f3a2b42ea5945bb422ba172b2b44, type: 2}
+    - target: {fileID: 3435090866978978462, guid: 1804188385301de44a03988de547afbd, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4356898819051130875, guid: 1804188385301de44a03988de547afbd, type: 3}
       propertyPath: m_AnchoredPosition.y
