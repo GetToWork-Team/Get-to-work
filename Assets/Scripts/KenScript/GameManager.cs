@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     private NewsPaper _SelectedNewsPaper;
 
     [SerializeField] private GameObject _WinScreenPanel;
+    [SerializeField] private GameObject _Anim;
 
     [SerializeField] private Button _PauseButton;
     [SerializeField] private GameObject _PauseMenu;
@@ -94,8 +95,20 @@ public class GameManager : MonoBehaviour
     {
         if(levelManager.dayNewsPapers[levelManager.currentDayIndex].newsPapers.Count <= 0)
         {
-            _WinScreenPanel.SetActive(true);
+            _Anim.SetActive(true);
+            StartCoroutine(LaucheWinWhenAnimEnd());
         }
+    }
+
+    private IEnumerator  LaucheWinWhenAnimEnd()
+    {
+        while (!_Anim.GetComponent<Anim>().isEnd)
+        {
+            yield return null;
+        }
+        _Anim.SetActive(false);
+
+        _WinScreenPanel.SetActive(true);
     }
 
     public void DestoyNewsPaper()
