@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     public static UnityEvent startGameEvent = new UnityEvent();
     public static UnityEvent startDitacticiel = new UnityEvent();
 
+    public DialogueSystem dialogueSys;
+
     [SerializeField] private GameObject _Ditacticiel;
 
     private void Awake()
@@ -39,6 +41,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        StartDialogue();
         _PauseButton.onClick.AddListener(OnPause);
         WinScreenPanel.onNextDayButton.AddListener(GenerateNewsPaper);
         //GenerateNewsPaper();
@@ -80,6 +83,12 @@ public class GameManager : MonoBehaviour
     {
         levelManager.ResetDayTimer(levelManager.currentDayIndex);
     }
+
+    private void StartDialogue()
+    {
+        dialogueSys.textToDisplay=LevelManager.instance.dayDialogue[LevelManager.instance.currentDayIndex];
+    }
+
 
     private void EndOfDayTask()
     {
@@ -126,7 +135,8 @@ public class GameManager : MonoBehaviour
 
     private void ShowDitacticiel()
     {
-        _Ditacticiel.SetActive(true);
+        if(_Ditacticiel)
+            _Ditacticiel.SetActive(true);
     }
 
 
