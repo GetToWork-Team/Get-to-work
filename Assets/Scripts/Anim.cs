@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -20,6 +21,7 @@ public class Anim : MonoBehaviour
     private void OnEnable()
     {
         Image.sprite = im1;
+        
     }
    
     private void OnMouseDown()
@@ -40,5 +42,6 @@ public class Anim : MonoBehaviour
                 break;
         }
     }
+    
 
 }
