@@ -1,5 +1,7 @@
 # Get to work
 
+<a href="https://www.isart.fr/"><img width="255" height="255" src = "https://pbs.twimg.com/profile_images/1554747272897990659/vh39_Bj2_400x400.jpg"></a>
+
 ## ⭐ About the Project
 
 This project is a game where you are a journalist that choose which information to let pass, it was made in 5 days with [![Static Badge](https://img.shields.io/badge/Unity-2022.3.34f1-%23D3D3D3?logo=Unity)](https://unity.com/).
